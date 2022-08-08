@@ -1,0 +1,601 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Modals / Tooltips" %}
+{% set active_page = "base_ui_modals_tooltips" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Tooltips -->
+	<h2 class="section-title">Tooltips</h2>
+	<div class="row">
+		<!-- Top Tooltip -->
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-header">
+					<h4>Top</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="tooltip" data-placement="top" title="Top Tooltip" type="button">Show Tooltip</button>
+				</div>
+			</div>
+		</div><!-- .col-lg-3 -->
+		<!-- End Top Tooltip -->
+
+		<!-- Right Tooltip -->
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-header">
+					<h4>Right</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="tooltip" data-placement="right" title="Right Tooltip" type="button">Show Tooltip</button>
+				</div>
+			</div>
+		</div><!-- .col-lg-3 -->
+		<!-- End Right Tooltip -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Bottom Tooltip -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Bottom</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="tooltip" data-placement="bottom" title="Bottom Tooltip" type="button">Show Tooltip</button>
+				</div>
+			</div>
+		</div><!-- .col-lg-3 -->
+		<!-- End Bottom Tooltip -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Left Tooltip -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Left</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="tooltip" data-placement="left" title="Left Tooltip" type="button">Show Tooltip</button>
+				</div>
+			</div>
+			<!-- End Left Tooltip -->
+		</div><!-- .col-lg-3 -->
+	</div><!-- .row -->
+	<!-- End Tooltips -->
+
+	<!-- Popovers -->
+	<h2 class="section-title">Popovers</h2>
+	<div class="row">
+		<div class="col-sm-6 col-lg-3">
+			<!-- Top Popover -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Top</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="popover" title="Top Popover" data-placement="top" data-content="This is example content. You can put a description or more info here." type="button">Show Popover</button>
+				</div>
+			</div>
+			<!-- End Top Popover -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Right Popover -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Right</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="popover" title="Right Popover" data-placement="right" data-content="This is example content. You can put a description or more info here." type="button">Show Popover</button>
+				</div>
+			</div>
+			<!-- End Right Popover -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Bottom Popover -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Bottom</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="popover" title="Bottom Popover" data-placement="bottom" data-content="This is example content. You can put a description or more info here." type="button">Show Popover</button>
+				</div>
+			</div>
+			<!-- End Bottom Popover -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Left Popover -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Left</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="popover" title="Left Popover" data-placement="left" data-content="This is example content. You can put a description or more info here." type="button">Show Popover</button>
+				</div>
+			</div>
+			<!-- End Left Popover -->
+		</div><!-- .col-lg-3 -->
+	</div><!-- .row -->
+	<!-- End Popovers -->
+
+	<!-- Bootstrap Modals -->
+	<!-- For advanced modal usage please check http://getbootstrap.com/javascript/#modals -->
+	<h2 class="section-title">Bootstrap modals</h2>
+	<div class="row">
+		<div class="col-sm-6 col-lg-3">
+			<!-- Normal Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Normal</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-normal" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Normal Modal -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Small Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Small</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-small" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Small Modal -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Large Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Large</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-large" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Large Modal -->
+		</div><!-- .col-lg-3 -->
+
+		<div class="col-sm-6 col-lg-3">
+			<!-- Fade In Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Fade In effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-fadein" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Fade In Modal -->
+		</div><!-- .col-lg-3 -->
+	</div><!-- .row -->
+	<!-- Bootstrap Modals -->
+
+	<!-- Modal extra options -->
+	<h2 class="section-title">Modal extra options</h2>
+	<div class="row">
+		<div class="col-sm-6 col-lg-3">
+			<!-- Top Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Top Position</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-top" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Top Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- Pop In Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Pop In effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-popin" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Pop In Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- Pop Out Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Pop Out effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-popout" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Pop Out Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- Slide Up Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Slide Up effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-slideup" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Slide Up Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- Slide Right Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Slide Right effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-slideright" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Slide Right Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- Slide Left Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Slide Left effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-slideleft" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End Slide Left Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- From Right Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>From Right effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-fromright" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End From Right Modal -->
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<!-- From Left Modal -->
+			<div class="card">
+				<div class="card-header">
+					<h4>From Left effect</h4>
+				</div>
+				<div class="card-block">
+					<button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-fromleft" type="button">Launch Modal</button>
+				</div>
+			</div>
+			<!-- End From Left Modal -->
+		</div>
+	</div>
+	<!-- End Modal extra options -->
+</div><!-- .container -->
+<!-- End Page Content -->
+
+<!-- Normal Modal -->
+<div class="modal" id="modal-normal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Normal Modal -->
+
+<!-- Small Modal -->
+<div class="modal" id="modal-small" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Small Modal -->
+
+<!-- Large Modal -->
+<div class="modal" id="modal-large" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Large Modal -->
+
+<!-- Fade In Modal -->
+<div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Fade In Modal -->
+
+<!-- Top Modal -->
+<div class="modal fade" id="modal-top" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-top">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Top Modal -->
+
+<!-- Pop In Modal -->
+<div class="modal fade" id="modal-popin" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-popin">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Pop In Modal -->
+
+<!-- Pop Out Modal -->
+<div class="modal fade" id="modal-popout" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-popout">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Pop Out Modal -->
+
+<!-- Slide Up Modal -->
+<div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-slideup">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Slide Up Modal -->
+
+<!-- Slide Right Modal -->
+<div class="modal fade" id="modal-slideright" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-slideright">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Slide Right Modal -->
+
+<!-- Slide Left Modal -->
+<div class="modal fade" id="modal-slideleft" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-slideleft">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Slide Left Modal -->
+
+<!-- From Right Modal -->
+<div class="modal fade" id="modal-fromright" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-fromright">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End From Right Modal -->
+
+<!-- From Left Modal -->
+<div class="modal fade" id="modal-fromleft" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-fromleft">
+		<div class="modal-content">
+			<div class="card-header bg-green bg-inverse">
+				<h4>Terms &amp; Conditions</h4>
+				<ul class="card-actions">
+					<li>
+						<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+					</li>
+				</ul>
+			</div>
+			<div class="card-block">
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End From Left Modal -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

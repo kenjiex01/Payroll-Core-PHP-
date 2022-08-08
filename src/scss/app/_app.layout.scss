@@ -1,0 +1,374 @@
+//
+// Layout
+// -------------------------
+
+.app-ui-mask-disable-scroll {
+	overflow-y: hidden;
+}
+
+/* Drawer */
+.app-layout-drawer {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
+	display: block;
+	width: $app-drawer-width;
+	background-color: #fff;
+	border-right: 1px solid $gray-lighter;
+	font-weight: $font-weight-strong;
+	background-color: #fff;
+	visibility: hidden;
+	transform: translateX(-$app-drawer-width);
+	transform-style: preserve-3d;
+	transition: .2s cubic-bezier(.4, 0, .2, 1) .1s;
+	transition-property: transform, visibility;
+
+	@media screen and (max-width: $screen-sm-max) {
+		-webkit-overflow-scrolling: touch;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+.app-layout-drawer.app-ui-layout-drawer-open {
+	transform: translateX(0);
+}
+
+.app-layout-drawer.app-ui-layout-drawer-visible {
+	visibility: visible;
+}
+
+.drawer-header {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: $app-header-height;
+	line-height: $app-header-height;
+	//padding: 0 $card-spacer-x; // Uncomment if you need spacing on sides
+	line-height: 1;
+
+	@include clearfix();
+}
+
+.drawer-header a {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.drawer-header a img {
+	height: $app-header-height;
+	width: auto;
+	max-width: none;
+}
+
+.drawer-main {
+	margin-top: $line-height-computed;
+	font-size: 13px;
+	transform: translateZ(0);
+}
+
+/* Drawer nav menu */
+.nav-drawer li a {
+	padding-right: $card-spacer-x;
+	padding-left: ($card-spacer-x * 2.333333 - 3px);
+	color: inherit;
+	font-weight: $font-weight-strong;
+}
+
+.nav-drawer > li > a {
+	border-left: 3px solid transparent;
+	padding-top: 14px;
+	padding-bottom: 13px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		//background-color: transparent;
+	}
+}
+
+.nav-drawer > .open > a {
+	&,
+	&:hover,
+	&:focus {
+		//background-color: transparent;
+		//border-color: transparent;
+	}
+}
+
+.nav-drawer > .active > a {
+	background-color: $navbar-default-link-active-bg;
+	border-color: $link-color;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: $link-color;
+	}
+}
+
+/* Nav icon */
+.nav-drawer > li > a > i {
+	position: absolute;
+	left: $card-spacer-x - 3px;
+	font-size: 1.25em;
+	line-height: 1.25;
+}
+
+.nav-drawer-header {
+	padding: 15px $card-spacer-x 5px;
+	font-size: 87.5%;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	opacity: .38;
+
+	&:first-of-type {
+		padding-top: 0;
+	}
+}
+
+/* Drawer nav-item with subnav */
+.nav-item-has-subnav > a:after {
+	position: absolute;
+	top: 50%;
+	right: $card-spacer-x;
+	font-family: Ionicons;
+	font-size: 17px;
+	content: '\f489';
+	transform: translate(50%,-50%);
+}
+
+.nav-item-has-subnav.open > a:after {
+	content: '\f462';
+}
+
+/* Drawer subnav */
+.nav-subnav {
+	display: none;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.nav-item-has-subnav.open > .nav-subnav {
+	display: block;
+}
+
+.nav-subnav > li > a {
+	padding-left: $card-spacer-x * 2.333333;
+	padding-right: $card-spacer-x;
+	color: lighten( desaturate($text-color, 10%), 25%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: inherit;
+		background-color: transparent;
+	}
+}
+
+.nav-subnav > .active > a {
+	color: inherit;
+}
+
+.drawer-footer {
+	bottom: 0;
+	width: 100%;
+	height: $line-height-computed * 4;
+	margin-top: $line-height-computed;
+	padding-top: $line-height-computed;
+	padding-right: $card-spacer-x;
+	padding-bottom: $line-height-computed;
+	padding-left: $card-spacer-x;
+	font-size: 13px;
+	line-height: $line-height-computed;
+}
+
+.drawer-footer .copyright {
+	margin-bottom: 0;
+}
+
+/* Header */
+.app-layout-header {
+	z-index: 4; // below drawer
+	background-color: #fff;
+	@include box-shadow($box-shadow-base);
+}
+
+.navbar-toggle[data-action*="sidebar_toggle"] {
+	margin-left: 15px;
+}
+
+.navbar-page-title {
+	display: inline-block;
+	margin-right: 20px;
+	padding-top: $navbar-padding-vertical;
+	padding-bottom: $navbar-padding-vertical;
+	font-weight: $font-weight-strong;
+}
+.navbar-brand {
+	padding: 0;
+	max-height: $navbar-height;
+}
+
+.navbar-brand img {
+	height: inherit;
+}
+
+/* Navbar Search form */
+.navbar .app-search-form {
+	@media screen and (max-width: $screen-sm-max) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.navbar .app-search-form .form-control,
+.navbar .app-search-form .btn {
+	background-color: $input-bg;
+	border-color: $input-border;
+}
+
+.navbar .app-search-form .form-group {
+	width: 100%;
+}
+
+.navbar .app-search-form .input-group-btn {
+	//width: 1%;
+}
+
+/* Backend header toolbar */
+
+$toolbar-icon-height: 30px !default;
+
+.navbar-toolbar > li:not(.dropdown-profile) > a {
+	padding-top: ($navbar-height - $toolbar-icon-height) / 2;
+	padding-bottom: (($navbar-height - $toolbar-icon-height) / 2) ;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.navbar-toolbar > li > a i {
+	display: inline-block;
+	width: $toolbar-icon-height;
+	height: $toolbar-icon-height;
+	line-height: $toolbar-icon-height;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.navbar-toolbar > li > a i + .badge {
+	position: absolute;
+	top: 35%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+$profile-avatar-height: 48px !default;
+.dropdown-profile a {
+	padding-top: ($navbar-height - $profile-avatar-height) / 2 !important;
+	padding-bottom: (($navbar-height - $profile-avatar-height) / 2)  !important;
+}
+
+.dropdown-profile a span {
+	vertical-align: middle;
+}
+
+/* Layout modal mask */
+.app-ui-mask-modal {
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	left: 0;
+	opacity: .1;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	z-index: 4; // above the header
+	position: fixed;
+	transition: visibility 0 linear .4s, opacity .4s cubic-bezier(.4, 0, .2, 1);
+	transform: translateZ(0);
+}
+
+.app-ui-mask-modal.app-ui-mask-visible {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0;
+}
+
+/* Layout content */
+.app-layout-content {
+	height: 100%;
+	width: 100%;
+}
+
+/* Layout footer */
+.app-layout-footer {
+	background-color: #fff;
+}
+
+/* Layout options */
+/* Layout has boxed canvas */
+.layout-has-boxed-canvas {
+	background-color: #eee;
+}
+
+.layout-has-boxed-canvas .app-layout-canvas {
+	margin: 0 auto;
+	max-width: $container-lg;
+
+	background-color: $body-bg;
+}
+
+/* Layout has drawer */
+.layout-has-drawer .app-layout-header,
+.layout-has-drawer .app-layout-content,
+.layout-has-drawer .app-layout-footer {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-left: $app-drawer-width;
+	}
+}
+
+.layout-has-drawer .app-layout-drawer {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		visibility: visible;
+		transform: translateX(0);
+		transition: none;
+	}
+}
+
+/* Layout has fixed header */
+.layout-has-fixed-header .app-layout-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.layout-has-fixed-header.layout-has-boxed-canvas .app-layout-header {
+	right: auto;
+	left: auto;
+	width: 100%;
+	max-width: $container-lg;
+}
+
+.layout-has-fixed-header .app-layout-content {
+	padding-top: $app-header-height;
+}
+
+
+/* Page header */
+.page-header h1 {
+	margin-top: 0;
+	margin-bottom: $line-height-computed / 4;
+}
+
+.page-header p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Page content */
+.page-content {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}

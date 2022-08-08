@@ -1,0 +1,366 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Grid" %}
+{% set active_page = "base_ui_grid" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- XS Grid -->
+	<h2 class="section-title">XS Grid <small>Always horizontal</small></h2>
+	<div class="row text-center">
+		<div class="col-xs-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-xs-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-xs-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-xs-4</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End XS Grid -->
+
+	<!-- SM Grid -->
+	<h2 class="section-title">SM Grid <small>Stacked at 768px</small></h2>
+	<div class="row text-center">
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-4</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End SM Grid -->
+
+	<!-- MD Grid -->
+	<h2 class="section-title">MD Grid <small>Stacked at 992px</small></h2>
+	<div class="row text-center">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-md-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-md-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-md-4</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End MD Grid -->
+
+	<!-- LG Grid -->
+	<h2 class="section-title">LG Grid <small>Stacked at 1200px</small></h2>
+	<div class="row text-center">
+		<div class="col-lg-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-lg-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-lg-4</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-lg-4</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End MD Grid -->
+
+	<!-- Mixed Grid -->
+	<h2 class="section-title">Mixed Grid <small>For complex layouts</small></h2>
+	<div class="row text-center">
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-6</code> <code>col-lg-3</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-6</code> <code>col-lg-3</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-6</code> <code>col-lg-3</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-6</code> <code>col-lg-3</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Mixed Grid -->
+
+	<!-- Grid with Offsets -->
+	<h2 class="section-title">Grid with Offsets <small>For complex layouts</small></h2>
+	<div class="row text-center">
+		<div class="col-sm-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-3</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3 col-sm-offset-6">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-3</code> <code> col-sm-offset-6</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col-md-4 col-md-offset-1">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-md-4</code> <code>col-md-offset-1</code></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-md-offset-2">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-md-4</code> <code>col-md-offset-2</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col-sm-6 col-sm-offset-3">
+			<div class="card">
+				<div class="card-block">
+					<p><code>col-sm-6</code> <code> col-sm-offset-3</code></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Grid with Offsets -->
+
+	<!-- Cards in Grid -->
+	<h2 class="section-title">Cards in Grid</h2>
+	<div class="row">
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Card Title</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Card's content..</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Blocks in Grid -->
+
+	<!-- Paragraphs in Block -->
+	<h2 class="section-title">Paragraphs in Grid</h2>
+	<div class="card">
+		<div class="card-header">
+			<h4>Paragraphs</h4>
+		</div>
+		<div class="card-block">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>Flexible Grid</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+				<div class="col-sm-6">
+					<h3>Many Options</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>For all screen sizes</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Easy to use</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Bootstrap Grid</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>12 Columns</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna convallis accumsan dolor, nibh molestie cras hac ac ad massa vulputate.</p>
+				</div>
+				<div class="col-sm-8">
+					<h3>Multiple Layouts</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus. Fusce ante ante urna molestie bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+					<h3>Mobile, Tablets and Desktop</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus. Fusce ante ante urna molestie bibendum tempus ante justo arcu erat accumsan adipiscing risus.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Mixed Grid</h3>
+					<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna convallis accumsan dolor, nibh molestie cras hac ac ad massa vulputate.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Paragraphs in Block -->
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

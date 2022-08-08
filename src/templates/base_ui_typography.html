@@ -1,0 +1,397 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Typography" %}
+{% set active_page = "base_ui_typography" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Bootstrap Headings</h4>
+				</div>
+				<div class="card-block">
+					<h1>H1. Heading</h1>
+					<h2>H2. Heading</h2>
+					<h3>H3. Heading</h3>
+					<h4>H4. Heading</h4>
+					<h5>H5. Heading</h5>
+					<h6>H6. Heading</h6>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Emphasis</h4>
+				</div>
+				<div class="card-block">
+					<p><small>This line of text is meant to be treated as fine print.</small> Ipsum, hic, iste, nihil dolor enim illum laborum <strong>rendered as bold text</strong> delectus beatae obcaecati voluptatum debitis molestias nam? <em>rendered as italicized text</em>.</p>
+					<p class="m-b-lg">Malorum gubergren mediocritatem in qui, indoctum torquatos ne per, virtute perfecto tincidunt ea quo. Consequatur expedita sit aspernatur fugit impedit nobis!</p>
+					<p class="text-left">Left aligned text.</p>
+					<p class="text-center">Center aligned text.</p>
+					<p class="text-right">Right aligned text.</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+	</div><!-- .row -->
+
+	<div class="row">
+
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>AppUI emphasis classes</h4>
+				</div>
+				<div class="card-block">
+					<h1 class="box-heading"></h1>
+					<p class="text-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-orange">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-red">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Bootstrap emphasis classes</h4>
+				</div>
+				<div class="card-block">
+					<h1 class="box-heading"></h1>
+					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+	</div><!-- .row -->
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Addresses</h4>
+				</div>
+				<div class="card-block">
+					<address>
+					   <strong>Twitter, Inc.</strong><br>
+					   795 Folsom Ave, Suite 600<br>
+					   San Francisco, CA 94107<br>
+					   <abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
+					<address>
+					   <strong>Full Name</strong><br>
+					   <a href="mailto:#">first.last@example.com</a>
+					</address>
+					<address>
+					   <strong>Full Name</strong><br>
+					   <a href="mailto:#">first.last@example.com</a>
+					</address>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Blockquotes</h4>
+				</div>
+				<div class="card-block">
+					<blockquote>
+					   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					</blockquote>
+
+					<blockquote class="pull-right">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					   <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+					</blockquote>
+					
+					<div class="clearfix"></div>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+	</div><!-- .row -->
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Unordered list</h4>
+				</div>
+				<div class="card-block">
+					<ul>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Consectetur adipiscing elit</li>
+						<li>Integer molestie lorem at massa</li>
+						<li>Facilisis in pretium nisl aliquet</li>
+						<li>
+							Nulla volutpat aliquam velit
+							<ul>
+								<li>Phasellus iaculis neque</li>
+								<li>Purus sodales ultricies</li>
+								<li>Vestibulum laoreet porttitor sem</li>
+								<li>Ac tristique libero volutpat at</li>
+							</ul>
+						</li>
+						<li>Faucibus porta lacus fringilla vel</li>
+						<li>Aenean sit amet erat nunc</li>
+						<li>Eget porttitor lorem</li>
+					</ul>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Ordered list</h4>
+				</div>
+				<div class="card-block">
+					<ol>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Consectetur adipiscing elit</li>
+						<li>Integer molestie lorem at massa</li>
+						<li>Facilisis in pretium nisl aliquet</li>
+						<li>Nulla volutpat aliquam velit</li>
+						<li>Phasellus iaculis neque</li>
+						<li>Purus sodales ultricies</li>
+						<li>Vestibulum laoreet porttitor sem</li>
+						<li>Ac tristique libero volutpat at</li>
+						<li>Faucibus porta lacus fringilla vel</li>
+						<li>Aenean sit amet erat nunc</li>
+						<li>Eget porttitor lorem</li>
+					</ol>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Unstyled list</h4>
+				</div>
+				<div class="card-block">
+					<ul class="list-unstyled">
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Consectetur adipiscing elit</li>
+						<li>Integer molestie lorem at massa</li>
+						<li>Facilisis in pretium nisl aliquet</li>
+						<li>
+							Nulla volutpat aliquam velit
+							<ul>
+								<li>Phasellus iaculis neque</li>
+								<li>Purus sodales ultricies</li>
+								<li>Vestibulum laoreet porttitor sem</li>
+								<li>Ac tristique libero volutpat at</li>
+							</ul>
+						</li>
+						<li>Faucibus porta lacus fringilla vel</li>
+						<li>Aenean sit amet erat nunc</li>
+						<li>Eget porttitor lorem</li>
+					</ul>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+	</div><!-- .row -->
+
+	<div class="row">
+	</div><!-- .row -->
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Description</h4>
+				</div>
+				<div class="card-block">
+					<dl>
+						<dt>Description lists</dt>
+							<dd>A description list is perfect for defining terms.</dd>
+						<dt>Euismod</dt>
+							<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+							<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+						<dt>Malesuada porta</dt>
+							<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+					</dl>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Horizontal description</h4>
+				</div>
+				<div class="card-block">
+					<dl class="dl-horizontal">
+						<dt>Description lists</dt>
+							<dd>A description list is perfect for defining terms.</dd>
+						<dt>Euismod</dt>
+							<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+							<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+						<dt>Malesuada porta</dt>
+							<dd>Etiam porta sem malesuada magna mollis euismod. Quot dicant commune his ea, eos cu facer repudiare consequuntur. Agam brute eirmod ut vel, regione labores.</dd>
+					</dl>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-6 -->
+	</div><!-- .row -->
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h4>Code</h4>
+				</div>
+				<div class="card-block">
+					<p>This sample text uses tag <code>&lt;code&gt;</code>, and text below uses tag <code>&lt;pre&gt;</code>.</p>
+					<pre class="prettyprint">&lt;script type=&quot;text/javascript&quot;&gt;
+// Say hello world until the user starts questioning
+// the meaningfulness of their existence.
+function helloWorld(world) {
+  for (var i = 42; --i &gt;= 0;) {
+    alert(&#39;Hello &#39; + String(world));
+  }
+}
+&lt;/script&gt;
+&lt;style&gt;
+p { color: pink }
+b { color: blue }
+u { color: &quot;umber&quot; }
+&lt;/style&gt;</pre>
+                                    </div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-12 -->
+	</div><!-- .row -->
+{#
+	<!-- Headings -->
+	<div class="row">
+		<div class="col-md-12">
+			<!-- Headings styles -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Headings</h4>
+				</div>
+				<div class="card-block card-table">
+					<h1>H1. Example heading</h1>
+					<h2>H2. Example heading</h2>
+					<h3>H3. Example heading</h4>
+					<h4>H4. Example heading</h4>
+					<h5>H5. Example heading</h5>
+					<h6>H6. Example heading</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Headings -->
+	<!-- End Typography -->
+
+	<!-- Lists -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Lists</h4>
+		</div>
+		<div class="card-block">
+			<div class="row">
+				<div class="col-md-3">
+					<h3 class="m-b">Unordered List</h4>
+					<ul>
+						<li>First item</li>
+						<li>Second item</li>
+						<li>
+							Sublist
+							<ul>
+								<li>First subitem</li>
+								<li>Second subitem</li>
+								<li>Third subitem</li>
+							</ul>
+						</li>
+						<li>Third item</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3 class="m-b">Ordered List</h4>
+					<ol>
+						<li>First item</li>
+						<li>Second item</li>
+						<li>
+							Sublist
+							<ol>
+								<li>First subitem</li>
+								<li>Second subitem</li>
+								<li>Third subitem</li>
+							</ol>
+						</li>
+						<li>Third item</li>
+					</ol>
+				</div>
+				<div class="col-md-3">
+					<h3 class="m-b">Icon List</h4>
+					<ul class="fa-ul">
+						<li><i class="ion-check fa-li"></i>First item</li>
+						<li><i class="ion-check fa-li"></i>Second item</li>
+						<li>
+							<i class="ion-check fa-li"></i>Sublist
+							<ul class="fa-ul">
+								<li><i class="ion-angle-right fa-li"></i>First subitem</li>
+								<li><i class="ion-angle-right fa-li"></i>Second subitem</li>
+								<li><i class="ion-angle-right fa-li"></i>Third subitem</li>
+							</ul>
+						</li>
+						<li><i class="ion-check fa-li"></i>Third item</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3 class="m-b">Unstyled List</h4>
+					<ul class="list-unstyled">
+						<li>First item</li>
+						<li>Second item</li>
+						<li>
+							Sublist
+							<ul>
+								<li>First subitem</li>
+								<li>Second subitem</li>
+								<li>Third subitem</li>
+							</ul>
+						</li>
+						<li>Third item</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Lists -->
+	#}
+		</div><!-- .col-md-6 -->
+	</div><!-- .row -->
+</div><!-- .container -->
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

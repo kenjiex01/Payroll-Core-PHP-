@@ -1,0 +1,778 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Forms &ndash; Wizard" %}
+{% set active_page = "base_forms_wizard" %}
+{% set open_subnav = "base_forms" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Simple Wizards -->
+	<h2 class="section-title">Simple Wizards</h2>
+	<div class="row">
+		<div class="col-lg-6">
+			<!-- Simple Classic Wizard (.js-wizard-simple class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-simple">
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active">
+						<a href="#simple-classic-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a href="#simple-classic-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a href="#simple-classic-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<form class="form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane m-t-md m-b-lg active" id="simple-classic-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-firstname">First Name</label>
+									<input class="form-control" type="text" id="simple-classic-firstname" name="simple-classic-firstname" placeholder="Please enter your first name" />
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-lastname">Last Name</label>
+									<input class="form-control" type="text" id="simple-classic-lastname" name="simple-classic-lastname" placeholder="Please enter your last name">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-email">Email</label>
+									<input class="form-control" type="email" id="simple-classic-email" name="simple-classic-email" placeholder="Please enter your email">
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane m-t-md m-b-lg" id="simple-classic-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-details">Details</label>
+									<textarea class="form-control" id="simple-classic-details" name="simple-classic-details" rows="9" placeholder="Share something about yourself"></textarea>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane m-t-md m-b-lg" id="simple-classic-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-city">City</label>
+									<input class="form-control" type="text" id="simple-classic-city" name="simple-classic-city" placeholder="Where do you live?">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-skills">Skills</label>
+									<select class="form-control" id="simple-classic-skills" name="simple-classic-skills" size="1">
+										<option value="">Please select your best skill</option>
+										<option value="1">Photoshop</option>
+										<option value="2">HTML</option>
+										<option value="3">CSS</option>
+										<option value="4">JavaScript</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="simple-classic-terms">
+										<input type="checkbox" id="simple-classic-terms" name="simple-classic-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Simple Classic Wizard -->
+		</div><!-- .col-lg-6 -->
+
+		<div class="col-lg-6">
+			<!-- Simple Wizard (.js-wizard-simple class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-simple">
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-tabs-alt nav-justified">
+					<li class="active">
+						<a href="#simple-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a href="#simple-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a href="#simple-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<form class="form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane fade in m-t-md m-b-lg active" id="simple-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-firstname" name="simple-firstname" placeholder="Please enter your first name" />
+										<label for="simple-firstname">First Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-lastname" name="simple-lastname" placeholder="Please enter your last name">
+										<label for="simple-lastname">Last Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="email" id="simple-email" name="simple-email" placeholder="Please enter your email">
+										<label for="simple-email">Email</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane fade m-t-md m-b-lg" id="simple-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<textarea class="form-control" id="simple-details" name="simple-details" rows="9" placeholder="Share something about yourself"></textarea>
+										<label for="simple-details">Details</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane fade m-t-md m-b-lg" id="simple-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-city" name="simple-city" placeholder="Where do you live?">
+										<label for="simple-city">City</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<select class="form-control" id="simple-skills" name="simple-skills" size="1">
+											<option value="">Please select your best skill</option>
+											<option value="1">Photoshop</option>
+											<option value="2">HTML</option>
+											<option value="3">CSS</option>
+											<option value="4">JavaScript</option>
+										</select>
+										<label for="simple-skills">Skills</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="simple-terms">
+										<input type="checkbox" id="simple-terms" name="simple-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Simple Wizard -->
+		</div><!-- .col-lg-6 -->
+
+	</div><!-- .row -->
+	<!-- End Simple Wizards -->
+
+	<!-- Wizards with Progress -->
+	<h2 class="section-title">Wizards with Progress</h2>
+	<div class="row">
+		<div class="col-lg-6">
+			<!-- Simple Classic Progress Wizard (.js-wizard-simple class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-simple">
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active">
+						<a href="#simple-classic-progress-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a href="#simple-classic-progress-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a href="#simple-classic-progress-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<form class="form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Progress -->
+					<div class="card-block b-b">
+						<div class="wizard-progress progress progress-mini m-b-0">
+							<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+						</div>
+					</div>
+					<!-- End Steps Progress -->
+
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane fade fade-up in m-t-md m-b-lg active" id="simple-classic-progress-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-firstname">First Name</label>
+									<input class="form-control" type="text" id="simple-classic-progress-firstname" name="simple-classic-progress-firstname" placeholder="Please enter your first name" />
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-lastname">Last Name</label>
+									<input class="form-control" type="text" id="simple-classic-progress-lastname" name="simple-classic-progress-lastname" placeholder="Please enter your last name">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-email">Email</label>
+									<input class="form-control" type="email" id="simple-classic-progress-email" name="simple-classic-progress-email" placeholder="Please enter your email">
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane fade fade-up m-t-md m-b-lg" id="simple-classic-progress-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-details">Details</label>
+									<textarea class="form-control" id="simple-classic-progress-details" name="simple-classic-progress-details" rows="9" placeholder="Share something about yourself"></textarea>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane fade fade-up m-t-md m-b-lg" id="simple-classic-progress-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-city">City</label>
+									<input class="form-control" type="text" id="simple-classic-progress-city" name="simple-classic-progress-city" placeholder="Where do you live?">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="simple-classic-progress-skills">Skills</label>
+									<select class="form-control" id="simple-classic-progress-skills" name="simple-classic-progress-skills" size="1">
+										<option value="">Please select your best skill</option>
+										<option value="1">Photoshop</option>
+										<option value="2">HTML</option>
+										<option value="3">CSS</option>
+										<option value="4">JavaScript</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="simple-classic-progress-terms">
+										<input type="checkbox" id="simple-classic-progress-terms" name="simple-classic-progress-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Simple Classic Progress Wizard -->
+		</div><!-- .col-lg-6 -->
+
+		<div class="col-lg-6">
+			<!-- Simple Progress Wizard (.js-wizard-simple class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-simple">
+				<!-- Steps Progress -->
+				<div class="card-block b-b">
+					<div class="wizard-progress progress active m-b-0">
+						<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+					</div>
+				</div>
+				<!-- End Steps Progress -->
+
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-tabs-alt nav-justified">
+					<li class="active">
+						<a href="#simple-progress-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a href="#simple-progress-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a href="#simple-progress-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<form class="form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane fade fade-right in m-t-md m-b-lg active" id="simple-progress-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-progress-firstname" name="simple-progress-firstname" placeholder="Please enter your first name" />
+										<label for="simple-progress-firstname">First Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-progress-lastname" name="simple-progress-lastname" placeholder="Please enter your last name">
+										<label for="simple-progress-lastname">Last Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="email" id="simple-progress-email" name="simple-progress-email" placeholder="Please enter your email">
+										<label for="simple-progress-email">Email</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane fade fade-right m-t-md m-b-lg" id="simple-progress-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<textarea class="form-control" id="simple-progress-details" name="simple-progress-details" rows="9" placeholder="Share something about yourself"></textarea>
+										<label for="simple-progress-details">Details</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane fade fade-right m-t-md m-b-lg" id="simple-progress-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="simple-progress-city" name="simple-progress-city" placeholder="Where do you live?">
+										<label for="simple-progress-city">City</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<select class="form-control" id="simple-progress-skills" name="simple-progress-skills" size="1">
+											<option value="">Please select your best skill</option>
+											<option value="1">Photoshop</option>
+											<option value="2">HTML</option>
+											<option value="3">CSS</option>
+											<option value="4">JavaScript</option>
+										</select>
+										<label for="simple-progress-skills">Skills</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="simple-progress-terms">
+										<input type="checkbox" id="simple-progress-terms" name="simple-progress-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Simple Progress Wizard -->
+		</div><!-- .col-lg-6 -->
+
+	</div><!-- .row -->
+	<!-- End Wizards with Progress -->
+
+	<!-- Wizards with Validation -->
+	<h2 class="section-title">Wizards with Validation</h2>
+	<div class="row">
+		<div class="col-lg-6">
+			<!-- Classic Validation Wizard (.js-wizard-classic-validation class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-classic-validation">
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active">
+						<a class="inactive" href="#validation-classic-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a class="inactive" href="#validation-classic-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a class="inactive" href="#validation-classic-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<!-- jQuery Validation (.js-form1 class is initialized in js/pages/base_forms_wizard.js) -->
+				<!-- For more examples please check https://github.com/jzaefferer/jquery-validation -->
+				<form class="js-form1 validation form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane m-t-md m-b-lg active" id="validation-classic-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-firstname">First Name</label>
+									<input class="form-control" type="text" id="validation-classic-firstname" name="validation-classic-firstname" placeholder="Please enter your first name" />
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-lastname">Last Name</label>
+									<input class="form-control" type="text" id="validation-classic-lastname" name="validation-classic-lastname" placeholder="Please enter your last name">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-email">Email</label>
+									<input class="form-control" type="email" id="validation-classic-email" name="validation-classic-email" placeholder="Please enter your email">
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane m-t-md m-b-lg" id="validation-classic-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-details">Details</label>
+									<textarea class="form-control" id="validation-classic-details" name="validation-classic-details" rows="9" placeholder="Share something about yourself"></textarea>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane m-t-md m-b-lg" id="validation-classic-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-city">City</label>
+									<input class="form-control" type="text" id="validation-classic-city" name="validation-classic-city" placeholder="Where do you live?">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label for="validation-classic-skills">Skills</label>
+									<select class="form-control" id="validation-classic-skills" name="validation-classic-skills" size="1">
+										<option value="">Please select your best skill</option>
+										<option value="1">Photoshop</option>
+										<option value="2">HTML</option>
+										<option value="3">CSS</option>
+										<option value="4">JavaScript</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="validation-classic-terms">
+										<input type="checkbox" id="validation-classic-terms" name="validation-classic-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Classic Validation Wizard -->
+		</div><!-- .col-lg-6 -->
+
+		<div class="col-lg-6">
+			<!-- Validation Wizard (.js-wizard-validation class is initialized in js/pages/base_forms_wizard.js) -->
+			<!-- For more examples please check http://vadimg.com/twitter-bootstrap-wizard-example/ -->
+			<div class="card js-wizard-validation">
+				<!-- Step Tabs -->
+				<ul class="nav nav-tabs nav-tabs-alt nav-justified">
+					<li class="active">
+						<a class="inactive" href="#validation-step1" data-toggle="tab">1. Standard</a>
+					</li>
+					<li>
+						<a class="inactive" href="#validation-step2" data-toggle="tab">2. Details</a>
+					</li>
+					<li>
+						<a class="inactive" href="#validation-step3" data-toggle="tab">3. Extra</a>
+					</li>
+				</ul>
+				<!-- End Step Tabs -->
+
+				<!-- Form -->
+				<!-- jQuery Validation (.js-form2 class is initialized in js/pages/base_forms_wizard.js) -->
+				<!-- For more examples please check https://github.com/jzaefferer/jquery-validation -->
+				<form class="js-form2 form-horizontal" action="base_forms_wizard.html" method="post">
+					<!-- Steps Content -->
+					<div class="card-block tab-content">
+						<!-- Step 1 -->
+						<div class="tab-pane fade fade-right in m-t-md m-b-lg active" id="validation-step1">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="validation-firstname" name="validation-firstname" placeholder="Please enter your first name" />
+										<label for="validation-firstname">First Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="validation-lastname" name="validation-lastname" placeholder="Please enter your last name">
+										<label for="validation-lastname">Last Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="email" id="validation-email" name="validation-email" placeholder="Please enter your email">
+										<label for="validation-email">Email</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 1 -->
+
+						<!-- Step 2 -->
+						<div class="tab-pane fade fade-right m-t-md m-b-lg" id="validation-step2">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<textarea class="form-control" id="validation-details" name="validation-details" rows="9" placeholder="Share something about yourself"></textarea>
+										<label for="validation-details">Details</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 2 -->
+
+						<!-- Step 3 -->
+						<div class="tab-pane fade fade-right m-t-md m-b-lg" id="validation-step3">
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<input class="form-control" type="text" id="validation-city" name="validation-city" placeholder="Where do you live?">
+										<label for="validation-city">City</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<div class="form-material">
+										<select class="form-control" id="validation-skills" name="validation-skills" size="1">
+											<option value="">Please select your best skill</option>
+											<option value="1">Photoshop</option>
+											<option value="2">HTML</option>
+											<option value="3">CSS</option>
+											<option value="4">JavaScript</option>
+										</select>
+										<label for="validation-skills">Skills</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<label class="css-input switch switch-sm switch-primary" for="validation-terms">
+										<input type="checkbox" id="validation-terms" name="validation-terms"><span></span> Agree with the <a data-toggle="modal" data-target="#modal-terms" href="#">terms</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- End Step 3 -->
+					</div>
+					<!-- End Steps Content -->
+
+					<!-- Steps Navigation -->
+					<div class="card-block b-t">
+						<div class="row">
+							<div class="col-xs-6">
+								<button class="wizard-prev btn btn-default" type="button">Previous</button>
+							</div>
+							<div class="col-xs-6 text-right">
+								<button class="wizard-next btn btn-default" type="button">Next</button>
+								<button class="wizard-finish btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Submit</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Steps Navigation -->
+				</form>
+				<!-- End Form -->
+			</div><!-- .card -->
+			<!-- End Validation Wizard Wizard -->
+		</div><!-- .col-lg-6 -->
+
+	</div><!-- .row -->
+	<!-- End Wizards with Validation -->
+</div>
+<!-- End Page Content -->
+
+<!-- Terms Modal -->
+<div class="modal fade" id="modal-terms" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-popout">
+		<div class="modal-content">
+			<div class="card m-b-0">
+				<div class="card-header">
+					<h4>Terms &amp; Conditions</h4>
+					<ul class="card-actions">
+						<li>
+							<button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> I agree</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Terms Modal -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page JS Plugins -->
+<script src="{{ js_path }}plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="{{ js_path }}plugins/jquery-validation/jquery.validate.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="{{ js_path }}pages/base_forms_wizard.js"></script>
+{% endblock %}

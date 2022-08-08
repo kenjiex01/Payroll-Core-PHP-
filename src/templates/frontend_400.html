@@ -1,0 +1,54 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Pages &ndash; 400" %}
+{% set active_page = "frontend_400" %}
+{% set open_subnav = "frontend" %}
+
+<!-- Extend "header" block (see "_layout/_frontend-document.html") -->
+{% extends "_layout/_frontend-header.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_frontend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Error Content -->
+<div class="page-content bg-white text-center">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<!-- Error Titles -->
+				<h1 class="display-4 m-b-0 text-green animated bounceIn">400</h1>
+				<p class="m-b-lg">We are sorry but your request contains bad syntax and cannot be fulfilled..</p>
+				<!-- End Error Titles -->
+
+				<!-- Search Form -->
+				<form class="form-horizontal m-b-lg" action="frontend_400.html" method="post">
+					<div class="form-group">
+						<div class="col-sm-6 col-sm-offset-3">
+							<div class="input-group input-group-lg">
+								<input class="form-control" type="text" placeholder="Search application..." />
+								<div class="input-group-btn">
+									<button class="btn btn-default"><i class="ion-ios-search-strong"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- End Search Form -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Error Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

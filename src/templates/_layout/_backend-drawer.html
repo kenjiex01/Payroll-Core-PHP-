@@ -1,0 +1,125 @@
+{% extends "_layout/_backend-document.html" %}
+{% block drawer %}
+
+{#
+Here you can list your drawer nav items with these parameters: ['href', 'slug', 'title', 'icon', 'subnav', 'type']
+Subnav is an array of items with these parameters: ['href', 'slug', 'title'].
+Slugs are used to set active pages or open subnav on selected pages.
+Type can be "header"
+#}
+
+{% set nav_drawer = [
+	['', '', 'Apps', '', '', 'header'],
+	['index.html', 'index', 'Dashboard', 'ion-ios-speedometer-outline'],
+	['frontend_home.html', 'frontend_home', 'Frontend', 'ion-ios-monitor-outline'],
+
+	['', '', 'Components', '', '', 'header'],
+	['', 'base_ui', 'UI Elements', 'ion-ios-calculator-outline',
+		[
+			['base_ui_buttons.html', 'base_ui_buttons', 'Buttons'],
+			['base_ui_cards.html', 'base_ui_cards', 'Cards'],
+			['base_ui_cards_api.html', 'base_ui_cards_api', 'Cards API'],
+			['base_ui_layout.html', 'base_ui_layout', 'Layout'],
+			['base_ui_grid.html', 'base_ui_grid', 'Grid'],
+			['base_ui_icons.html', 'base_ui_icons', 'Icons'],
+			['base_ui_modals_tooltips.html', 'base_ui_modals_tooltips', 'Modals / Tooltips'],
+			['base_ui_alerts_notify.html', 'base_ui_alerts_notify', 'Alerts / Notify'],
+			['base_ui_pagination.html', 'base_ui_pagination', 'Pagination'],
+			['base_ui_progress.html', 'base_ui_progress', 'Progress'],
+			['base_ui_tabs.html', 'base_ui_tabs', 'Tabs'],
+			['base_ui_typography.html', 'base_ui_typography', 'Typography'],
+			['base_ui_widgets.html', 'base_ui_widgets', 'Widgets']
+		]
+	],
+	['', 'base_forms', 'Forms', 'ion-ios-compose-outline',
+		[
+			['base_forms_elements.html', 'base_forms_elements', 'Elements'],
+			['base_forms_samples.html', 'base_forms_samples', 'Samples'],
+			['base_forms_pickers_select.html', 'base_forms_pickers_select', 'Pickers & Select'],
+			['base_forms_validation.html', 'base_forms_validation', 'Validation'],
+			['base_forms_wizard.html', 'base_forms_wizard', 'Wizard']
+		]
+	],
+	['', 'base_tables', 'Tables', 'ion-ios-list-outline',
+		[
+			['base_tables_styles.html', 'base_tables_styles', 'Styles'],
+			['base_tables_responsive.html', 'base_tables_responsive', 'Responsive'],
+			['base_tables_tools.html', 'base_tables_tools', 'Tools'],
+			['base_tables_pricing.html', 'base_tables_pricing', 'Pricing'],
+			['base_tables_datatables.html', 'base_tables_datatables', 'Wizard']
+		]
+	],
+	['', 'base_pages', 'Pages', 'ion-ios-browsers-outline',
+		[
+			['base_pages_blank.html', 'base_pages_blank', 'Blank'],
+			['base_pages_inbox.html', 'base_pages_inbox', 'Inbox'],
+			['base_pages_invoice.html', 'base_pages_invoice', 'Invoice'],
+			['base_pages_profile.html', 'base_pages_profile', 'Profile'],
+			['base_pages_search.html', 'base_pages_search', 'Search']
+		]
+	],
+	['', 'base_js', 'JS plugins', 'ion-social-javascript-outline',
+		[
+			['base_js_maps.html', 'base_js_maps', 'Maps'],
+			['base_js_sliders.html', 'base_js_sliders', 'Sliders'],
+			['base_js_charts_flot.html', 'base_js_charts_flot', 'Charts - Flot'],
+			['base_js_charts_chartjs.html', 'base_js_charts_chartjs', 'Charts - Chart.js'],
+			['base_js_charts_sparkline.html', 'base_js_charts_sparkline', 'Charts - Sparkline'],
+			['base_js_draggable.html', 'base_js_draggable', 'Draggable'],
+			['base_js_syntax_highlight.html', 'base_js_syntax_highlight', 'Syntax highlight']
+		]
+	]
+] %}
+
+<!-- Drawer -->
+<aside class="app-layout-drawer">
+
+	<!-- Drawer scroll area -->
+	<div class="app-layout-drawer-scroll">
+		<!-- Drawer logo -->
+		<div id="logo" class="drawer-header">
+			<a href="index.html"><img class="img-responsive" src="{{ img_path }}logo/logo-backend.png" title="AppUI" alt="AppUI" /></a>
+		</div>
+
+		<!-- Drawer navigation -->
+		<nav class="drawer-main">
+			<ul class="nav nav-drawer">
+				{# Loop through our drawer navigation #}
+				{% for href, slug, title, icon, subnav, type in nav_drawer -%}
+					{# Check if nav-item is nav-drawer-header.. #}
+					{% if type == "header" %}
+						<li class="nav-item nav-drawer-header">{{ title | e }}</li>
+					{# ..or has subnav #}
+					{% elif subnav %}
+					<li class="nav-item nav-item-has-subnav{% if slug == open_subnav %} active open{% endif %}">
+						<a href="javascript:void(0)"><i class="{{ icon }}"></i> {{ title | e }}</a>
+						<ul class="nav nav-subnav">
+							{% for href, slug, title in subnav %}
+								<li{% if slug == active_page %} class="active"{% endif %}>
+									<a href="{{ href | e }}">{{ title | e }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</li>
+					{# or normal nav-item #}
+					{% else %}
+					<li class="nav-item{% if slug == active_page %} active{% endif %}">
+						<a href="{{ href | e }}"><i class="{{ icon }}"></i> {{ title | e }}</a>
+					</li>
+					{% endif %}
+				{%- endfor %}
+				{# End of loop #}
+			</ul>
+		</nav>
+		<!-- End drawer navigation -->
+
+		<div class="drawer-footer">
+			<p class="copyright">AppUI Template &copy;</p>
+			<a href="https://shapebootstrap.net/item/1525731-appui-admin-frontend-template/?ref=rustheme" target="_blank" rel="nofollow">Purchase a license</a>
+		</div>
+	</div>
+	<!-- End drawer scroll area -->
+</aside>
+<!-- End drawer -->
+
+{% endblock %}

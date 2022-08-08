@@ -1,0 +1,31 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Pages &ndash; Blank" %}
+{% set active_page = "base_pages_blank" %}
+{% set open_subnav = "base_pages" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<h2 class="section-title">Your content</h2>
+	<p>...</p>
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

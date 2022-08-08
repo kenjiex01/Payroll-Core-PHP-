@@ -1,0 +1,85 @@
+{% extends "_layout/_frontend-document.html" %}
+{% block header %}
+
+{#
+Here you can list your navbar nav items with these parameters: ['href', 'slug', 'title', 'subnav']
+Subnav is array of items with these parameters: ['href', 'slug', 'title'].
+Slugs are used to set active pages or open sub-nav on selected pages.
+#}
+
+{% set menu = [
+	['frontend_home.html', 'frontend_home', 'Home'],
+	['frontend_about.html', 'frontend_about', 'About'],
+	['frontend_pricing.html', 'frontend_pricing', 'Pricing'],
+	['frontend_team.html', 'frontend_team', 'Team'],
+	['', 'frontend', 'Pages',
+		[
+			['frontend_search.html', 'frontend_search', 'Search'],
+			['frontend_support.html', 'frontend_support', 'Support'],
+			['frontend_contact.html', 'frontend_contact', 'Contact'],
+			['frontend_login_signup.html', 'frontend_login_signup', 'Login / Signup'],
+			['frontend_400.html', 'frontend_400', 'Error 400']
+		]
+	]
+] %}
+
+<!-- Header -->
+<header class="app-layout-header">
+	<nav class="navbar navbar-default p-y">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Header logo -->
+				<a class="navbar-brand" href="javascript:void(0)">
+					<img class="img-responsive" src="{{ img_path }}logo/logo-frontend.png" title="AppUI" alt="AppUI" />
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="header-navbar-collapse">
+				<!-- Header search form -->
+				<form class="navbar-form navbar-right app-search-form" role="search">
+					<div class="form-group">
+						<div class="input-group">
+							<input class="form-control" type="search" id="search-input" placeholder="Search..." />
+							<span class="input-group-btn">
+								<button class="btn" type="button"><i class="ion-ios-search-strong"></i></button>
+							</span>
+						</div>
+					</div>
+				</form>
+
+				<!-- Header navigation menu -->
+				<ul id="main-menu" class="nav navbar-nav navbar-left">
+
+					{% for href, slug, title, subnav in menu -%}
+						{% if subnav %}
+							<li class="dropdown{% if slug == open_subnav %} active{% endif %}">
+								<a href="#" data-toggle="dropdown">{{ title | e }} <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									{% for href, slug, title in subnav %}
+										<li{% if slug == active_page %} class="active"{% endif %}>
+											<a href="{{ href | e }}">{{ title | e }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% else %}
+							<li{% if slug == active_page %} class="active"{% endif %}>
+								<a href="{{ href | e }}">{{ title | e }}</a>
+							</li>
+						{% endif %}
+					{%- endfor %}
+				</ul>
+				<!-- End header navigation menu -->
+			</div>
+		</div><!-- .container -->
+	</nav><!-- .navbar -->
+</header>
+<!-- End header -->
+
+{% endblock %}

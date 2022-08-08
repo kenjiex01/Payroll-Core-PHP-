@@ -1,0 +1,390 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Navigation" %}
+{% set active_page = "base_ui_pagination" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Pagination -->
+	<h2 class="section-title">Pagination</h2>
+
+	<!-- Default Pagination -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Default style</h4>
+		</div>
+		<div class="card-block">
+			<nav>
+				<ul class="pagination pagination-sm">
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pagination">
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pagination pagination-lg">
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div><!-- End Default Pagination -->
+
+	<!-- Disabled and Active States -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Disabled and active states</h4>
+		</div>
+		<div class="card-block">
+			<nav>
+				<ul class="pagination pagination-sm">
+					<li class="disabled">
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li class="active">
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pagination">
+					<li class="disabled">
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li class="active">
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pagination pagination-lg">
+					<li class="disabled">
+						<a href="javascript:void(0)"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li class="active">
+						<a href="javascript:void(0)">1</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div><!-- End Disabled and Active States -->
+
+	<!-- Pager -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Pager</h4>
+		</div>
+		<div class="card-block">
+			<nav>
+				<ul class="pager">
+					<li class="previous">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Previous"><i class="ion-ios-arrow-left"></i></a>
+					</li>
+					<li class="next">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Next"><i class="ion-ios-arrow-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pager">
+					<li class="previous">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Previous"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li class="next">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Next"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pager">
+					<li class="previous">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Previous"><i class="ion-chevron-left"></i></a>
+					</li>
+					<li class="next">
+						<a href="javascript:void(0)" data-toggle="tooltip" title="Next"><i class="ion-chevron-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pager">
+					<li class="previous">
+						<a href="javascript:void(0)">Previous</a>
+					</li>
+					<li class="next">
+						<a href="javascript:void(0)">Next</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div><!-- End Pager -->
+	<!-- End Pagination -->
+
+	<!-- Navigation Pills -->
+	<h2 class="section-title">Navigation Pills</h2>
+	<div class="row">
+		<div class="col-lg-4">
+			<!-- Default Pills -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Default style</h4>
+				</div>
+				<div class="card-block">
+					<ul class="nav nav-pills nav-stacked m-b">
+						<li class="active">
+							<a href="javascript:void(0)">Home</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Profile</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Messages</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- End Default Pills -->
+		</div><!-- .col-lg-4 -->
+
+		<div class="col-lg-4">
+			<!-- With Icons -->
+			<div class="card">
+				<div class="card-header">
+					<h4>With icons</h4>
+				</div>
+				<div class="card-block">
+					<ul class="nav nav-pills nav-stacked m-b">
+						<li class="active">
+							<a href="javascript:void(0)"><i class="ion-home m-r"></i> Home</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><i class="ion-person m-r"></i> Profile</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><i class="ion-email m-r"></i> Messages</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- End With Icons -->
+		</div><!-- .col-lg-4 -->
+
+		<div class="col-lg-4">
+			<!-- With Badges -->
+			<div class="card">
+				<div class="card-header">
+					<h4>With badges</h4>
+				</div>
+				<div class="card-block">
+					<ul class="nav nav-pills nav-stacked m-b">
+						<li class="active">
+							<a href="javascript:void(0)">Home <span class="badge pull-right">3</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Profile <span class="badge pull-right">1</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Messages <span class="badge pull-right">2</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- End With Badges -->
+		</div><!-- .col-lg-4 -->
+	</div><!-- .row -->
+	<!-- End Navigation Pills -->
+
+	<!-- List Groups -->
+	<h2 class="section-title">List Groups</h2>
+	<div class="row">
+		<div class="col-lg-4">
+			<!-- Default List Groups -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Default style</h4>
+				</div>
+				<div class="card-block">
+					<ul class="list-group">
+						<li class="list-group-item">This is a simple</li>
+						<li class="list-group-item">List Group</li>
+						<li class="list-group-item">For showcasing</li>
+						<li class="list-group-item">A list of items</li>
+					</ul>
+				</div>
+			</div>
+			<!-- End Default List Groups -->
+		</div><!-- .col-lg-4 -->
+
+		<div class="col-lg-4">
+			<!-- With Badges -->
+			<div class="card">
+				<div class="card-header">
+					<h4>With badges</h4>
+				</div>
+				<div class="card-block">
+					<ul class="list-group">
+						<li class="list-group-item">This is a simple <span class="badge">1</span></li>
+						<li class="list-group-item">List Group <span class="badge">7</span></li>
+						<li class="list-group-item">For showcasing <span class="badge">5</span></li>
+						<li class="list-group-item">A list of items <span class="badge">3</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End With Badges -->
+		</div><!-- .col-lg-4 -->
+
+		<div class="col-lg-4">
+			<!-- With Links -->
+			<div class="card">
+				<div class="card-header">
+					<h4>With links</h4>
+				</div>
+				<div class="card-block">
+					<div class="list-group">
+						<a class="list-group-item active" href="javascript:void(0)">
+							This is a simple <span class="badge">1</span>
+						</a>
+						<a class="list-group-item" href="javascript:void(0)">
+							List Group <span class="badge">7</span>
+						</a>
+						<a class="list-group-item" href="javascript:void(0)">
+							For showcasing <span class="badge">5</span>
+						</a>
+						<a class="list-group-item" href="javascript:void(0)">
+							A list of items <span class="badge">3</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- End With Links -->
+		</div><!-- .col-lg-4 -->
+	</div><!-- .row -->
+	<!-- End List Groups -->
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

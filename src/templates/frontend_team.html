@@ -1,0 +1,114 @@
+<!-- Set document title - see "_layout/_frontend-document.html" -->
+{% set document_title = "Frontend - Team" %}
+{% set active_page = "frontend_team" %}
+
+<!-- Extend "header" block (see "_layout/_frontend-document.html") -->
+{% extends "_layout/_frontend-header.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_frontend-document.html") -->
+{% extends "_layout/_frontend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page header -->
+<div class="page-header bg-app bg-inverse">
+	<div class="container">
+		<!-- Section Content -->
+		<div class="p-y-lg text-center">
+			<h1 class="display-2">Get to Know Us</h1>
+			<p class="text-muted">Meet our passionate team, one at a time.</p>
+		</div>
+		<!-- End Section Content -->
+	</div>
+</div>
+<!-- End Page header -->
+
+<!-- Team -->
+<div class="p-y-lg bg-white">
+	<div class="container">
+		<p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum justo vitae convallis varius. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in venenatis. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in venenatis.</p>
+
+		<!-- Section Content -->
+		<div class="row p-t-lg p-b-xl">
+			<div class="col-md-3">
+				<div class="p-x-md text-center">
+					<div class="p-x">
+						<img class="img-responsive img-rounded" src="{{ img_path }}avatars/avatar1.jpg" alt="" />
+					</div>
+					<h4>Gerald Alvarado <br /> <small class="text-muted">Support Ninja</small></h4>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae.</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="p-x-md text-center">
+					<div class="p-x">
+						<img class="img-responsive img-rounded" src="{{ img_path }}avatars/avatar2.jpg" alt="" />
+					</div>
+					<h4>Tiffany Kim <br /> <small class="text-muted">Support Ninja</small></h4>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae.</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="p-x-md text-center">
+					<div class="p-x">
+						<img class="img-responsive img-rounded" src="{{ img_path }}avatars/avatar3.jpg" alt="" />
+					</div>
+					<h4>Alexander Hayes <br /> <small class="text-muted">Support Ninja</small></h4>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae.</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="p-x-md text-center">
+					<div class="p-x">
+						<img class="img-responsive img-rounded" src="{{ img_path }}avatars/avatar5.jpg" alt="" />
+					</div>
+					<h4>Heather Estrada <br /> <small class="text-muted">Support Ninja</small></h4>
+					<p>Dolor posuere proin blandit accumsan senectus netus nullam curae.</p>
+				</div>
+			</div>
+		</div><!-- .row -->
+		<!-- End Section Content -->
+
+		<!-- Hiring -->
+		<div class="p-y-lg b-t text-center">
+			<h2 class="h1 display-2">We're Hiring</h2>
+			<p class="lead">Habeo facilisi ut his. Id mel tale placerat percipitur.</p>
+			<div class="row text-left">
+				<div class="col-md-6 col-md-offset-3">
+					<form class="m-t-sm m-b-s">
+						<div class="form-group row">
+							<div class="col-sm-6">
+								<input type="text" class="form-control" placeholder="Your name" />
+							</div>
+							<div class="col-sm-6">
+								<input type="email" class="form-control" placeholder="Your email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="sr-only">Your message</label>
+							<textarea class="form-control" id="exampleInputEmail1" placeholder="Your message.."></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-app btn-block" type="submit">Send Message</button>
+						</div>
+						<span class="help-block">This form is a placeholder. Requests won't be proccessed.</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End Hiring -->
+	</div>
+</div>
+<!-- End Team -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

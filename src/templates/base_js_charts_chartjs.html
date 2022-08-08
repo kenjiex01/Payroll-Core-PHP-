@@ -1,0 +1,146 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Chart.js" %}
+{% set active_page = "base_js_charts_chartjs" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page content -->
+<div class="container-fluid p-y-md">
+	<!-- Chart.js Charts (initialized in js/pages/base_comp_charts.js), for more examples please check http://www.chartjs.org/docs/ -->
+	<h2 class="section-title">Chart.js</h2>
+	<div class="row">
+		<!-- Lines Chart -->
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Lines</h4>
+					<ul class="card-actions">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Lines Chart Container -->
+					<div style="height: 330px;">
+						<canvas class="js-chartjs-lines"></canvas>
+					</div>
+				</div>
+			</div>
+		</div><!-- End Lines Chart // .col-md-6 -->
+
+		<!-- Bars Chart -->
+		<div class="col-md-6">			
+			<div class="card">
+				<div class="card-header">
+					<h4>Bars</h4>
+					<ul class="card-actions ">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Bars Chart Container -->
+					<div style="height: 330px;"><canvas class="js-chartjs-bars"></canvas></div>
+				</div>
+			</div>
+		</div><!-- End Bars Chart // .col-md-6 -->
+
+		<!-- Radar Chart -->
+		<div class="col-md-6">			
+			<div class="card">
+				<div class="card-header">
+					<h4>Radar</h4>
+					<ul class="card-actions">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Radar Chart Container -->
+					<div style="height: 330px;"><canvas class="js-chartjs-radar"></canvas></div>
+				</div>
+			</div>
+		</div><!-- End Radar Chart // .col-md-6-->
+
+		<!-- Polar Area Chart -->
+		<div class="col-md-6">			
+			<div class="card">
+				<div class="card-header">
+					<h4>Polar Area</h4>
+					<ul class="card-actions">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Polar Area Chart Container -->
+					<div style="height: 330px;"><canvas class="js-chartjs-polar"></canvas></div>
+				</div>
+			</div>
+		</div><!-- End Polar Area Chart // .col-md-6 -->
+
+		<!-- Pie Chart -->
+		<div class="col-md-6">			
+			<div class="card">
+				<div class="card-header">
+					<h4>Pie</h4>
+					<ul class="card-actions ">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Pie Chart Container -->
+					<div style="height: 330px;"><canvas class="js-chartjs-pie"></canvas></div>
+				</div>
+			</div>			
+		</div><!-- End Pie Chart // .col-md-6 -->
+
+		<!-- Donut Chart -->
+		<div class="col-md-6">			
+			<div class="card">
+				<div class="card-header">
+					<h4>Donut</h4>
+					<ul class="card-actions">
+						<li>
+							<button  type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block text-center">
+					<!-- Donut Chart Container -->
+					<div style="height: 330px;"><canvas class="js-chartjs-donut"></canvas></div>
+				</div>
+			</div>
+		</div><!-- End Donut Chart // .col-md-6 -->
+	</div><!-- End Chart.js Charts // .row -->
+</div><!-- .container-fluid -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page JS Plugins -->
+<script src="{{ js_path }}plugins/chartjs/Chart.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="{{ js_path }}pages/base_js_charts_chartjs.js"></script>
+{% endblock %}

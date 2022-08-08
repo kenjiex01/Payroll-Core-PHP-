@@ -1,0 +1,69 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Layout" %}
+{% set active_page = "base_ui_layout" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<h2 class="section-title">Layout</h2>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h4>Boxed body Canvas</h4>
+				</div>
+				<div class="card-block">
+					<p class="m-b-md">To make canvas boxed, add class <code>layout-has-boxed-canvas</code> to &#60;body&#62; tag</p>
+					<button class="btn btn-app" type="button" data-toggle="layout" data-action="toggle_canvas">Toggle Boxed Canvas</button>
+				</div>
+			</div>
+		</div><!-- .col-md-12 -->
+
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h4>Fixed Header</h4>
+				</div>
+				<div class="card-block">
+					<p class="m-b-md">To make header fixed to top of screen, add class <code>layout-has-fixed-header</code> to &#60;body&#62; tag</p>
+					<button class="btn btn-app" type="button" data-toggle="layout" data-action="toggle_header">Toggle Fixed Header</button>
+				</div>
+			</div>
+		</div><!-- .col-md-12 -->
+
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h4>Drawer</h4>
+				</div>
+				<div class="card-block">
+					<p class="m-b-md">To enable side drawer, add class <code>layout-has-drawer</code> to &#60;body&#62; tag</p>
+					<button class="btn btn-app" type="button" data-toggle="layout" data-action="toggle_drawer">Toggle Drawer</button>
+				</div>
+			</div>
+		</div><!-- .col-md-12 -->
+	</div><!-- .row -->
+	<!-- End cards API -->
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

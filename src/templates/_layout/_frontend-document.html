@@ -1,0 +1,76 @@
+{% set css_path = path + css_path %}
+{% set js_path = path + js_path %}
+{% set img_path = path + img_path %}
+<!DOCTYPE html>
+<html class="app-ui">
+	<head>
+		<!-- Meta -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<!-- Document title -->
+		<title>{{ document_title | safe }} | AppUI</title>
+
+		<meta name="description" content="AppUI - Frontend Template & UI Framework" />
+		<meta name="robots" content="noindex, nofollow" />
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" href="{{ img_path }}favicons/apple-touch-icon.png" />
+		<link rel="icon" href="{{ img_path }}favicons/favicon.ico" />
+
+		<!-- Google fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+
+		{# This block can be used on templates pages so it will add scripts in a head tag #}
+		{% block scripts_head %}{% endblock %}
+
+		<!-- AppUI CSS stylesheets -->
+		<link rel="stylesheet" id="css-font-awesome" href="{{ css_path }}font-awesome.css" />
+		<link rel="stylesheet" id="css-ionicons" href="{{ css_path }}ionicons.css" />
+		<link rel="stylesheet" id="css-bootstrap" href="{{ css_path }}bootstrap.css" />
+		<link rel="stylesheet" id="css-app" href="{{ css_path }}app.css" />
+		<link rel="stylesheet" id="css-app-custom" href="{{ css_path }}app-custom.css" />
+		<!-- End Stylesheets -->
+	</head>
+
+	<body class="app-ui">
+        <div class="app-layout-canvas">
+			<div class="app-layout-container">
+
+				{# Drawer should be above header #}
+				{% block drawer %}{% endblock %}
+
+				{# Header #}
+				{% block header %}{% endblock %}
+
+				{# Content #}
+				<main class="app-layout-content">
+
+					{# Page content #}
+					{% block page_layout %}{% endblock %}
+
+				</main>
+
+				{# Footer #}
+				{% include "_layout/_frontend-footer.html" %}
+
+			</div><!-- .app-layout-container -->
+        </div><!-- .app-layout-canvas -->
+
+		{# Site modal #}
+		{% include "_layout/_modal.html" %}
+
+		<!-- AppUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
+		<script src="{{ js_path }}core/jquery.min.js"></script>
+		<script src="{{ js_path }}core/bootstrap.min.js"></script>
+		<script src="{{ js_path }}core/jquery.slimscroll.min.js"></script>
+		<script src="{{ js_path }}core/jquery.scrollLock.min.js"></script>
+		<script src="{{ js_path }}core/jquery.placeholder.min.js"></script>
+		<script src="{{ js_path }}app.js"></script>
+		<script src="{{ js_path }}app-custom.js"></script>
+
+		{# This block can be used on templates pages so it will add scripts before closing body tag #}
+		{% block scripts_footer %}{% endblock %}
+	</body>
+</html>

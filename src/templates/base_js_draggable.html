@@ -1,0 +1,346 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Draggable items" %}
+{% set active_page = "base_js_draggable" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Draggable Items with jQueryUI ( .js-draggable-items class is initialized in App() -> uiHelperDraggableItems() ) -->
+	<!-- For more info and examples please check https://jqueryui.com/sortable/ -->
+
+	<h2 class="section-title">Drag handler in card-header</h2>
+	<div class="row js-draggable-items">
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul><!-- .card-actions -->
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+		</div><!-- .draggable-column .col-sm-4 -->
+
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+		</div><!-- .draggable-column .col-sm-4 -->
+
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header draggable-handler">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<i class="ion-arrow-move"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block ">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+		</div><!-- .draggable-column .col-sm-4 -->
+	</div><!-- .row -->
+
+	<h2 class="section-title">Drag handler in actions bar</h2>
+	<div class="row js-draggable-items">
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+		</div><!-- .draggable-column .col-sm-4 -->
+
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+		</div><!-- .draggable-column .col-sm-4 -->
+
+		<div class="col-sm-4 draggable-column">
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+
+			<!-- Card -->
+			<div class="card draggable-item">
+				<div class="card-header">
+					<h4>Card</h4>
+					<ul class="card-actions">
+						<li>
+							<span class="draggable-handler"><i class="ion-arrow-move"></i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Draggable &amp; Sortable..</p>
+				</div>
+			</div>
+			<!-- End Card -->
+		</div><!-- .draggable-column .col-sm-4 -->
+	</div><!-- .row -->
+	<!-- End Draggable Items with jQueryUI -->
+</div><!-- .container-fluid -->
+<!-- End Page Content -->
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page Plugins -->
+<script src="{{ js_path }}plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Page JS Code -->
+<script>
+	$( function () {
+		// Init page helpers (jQueryUI)
+		App.initHelpers( 'draggable-items' );
+	});
+</script>
+{% endblock %}

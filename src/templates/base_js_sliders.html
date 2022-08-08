@@ -1,0 +1,201 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Sliders" %}
+{% set active_page = "base_js_sliders" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Slick slider (.js-slider class is initialized in App() -> uiHelperSlick()) -->
+<!-- For more info and examples please check http://kenwheeler.github.io/slick/ -->
+<!--
+	Extra Classes:
+
+	'slick-nav-hover'    for navigation buttons visible on hover
+	'slick-nav-white'    for white navigation buttons
+-->
+
+<!-- Content section -->
+<div class="section">
+	<div class="container-fluid p-y-md">
+		<h2 class="section-title">Content Sliders</h2>
+
+		<div class="row">
+			<!-- Avatars -->
+			<div class="col-md-4">				
+				<div class="card">
+					<div class="card-header">
+						<h4>Avatars</h4>
+					</div>
+					<div class="card-block">
+						<!-- Slider with Avatars -->
+						<div class="js-slider text-center" data-slider-dots="true" data-slider-arrows="true">
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar1.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Phillip Lee</p>
+								<p class="small text-muted">Technology director</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar2.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Kathleen Robertson</p>
+								<p class="small text-muted">Content manager</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar3.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Scott Ruiz</p>
+								<p class="small text-muted">Developer</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar4.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Ann Phillips</p>
+								<p class="small text-muted">Support Staff</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar5.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Cheryl Welch</p>
+								<p class="small text-muted">Graphic Designer</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar6.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Paul Cooper</p>
+								<p class="small text-muted">Database Developer</p>
+							</div>
+						</div><!-- End Slider with Avatars -->
+					</div>
+				</div>				
+			</div><!-- End Avatars // .col-md-4 -->
+
+			<!-- Avatars row -->
+			<div class="col-md-8">				
+				<div class="card">
+					<div class="card-header">
+						<h4>Avatars row</h4>
+					</div>
+					<div class="card-block">
+						<!-- Slider with row of slides/avatars -->
+						<div class="js-slider text-center" data-slider-autoplay="true" data-slider-dots="true" data-slider-arrows="true" data-slider-num="3">
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar1.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Phillip Lee</p>
+								<p class="small text-muted">Technology director</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar2.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Kathleen Robertson</p>
+								<p class="small text-muted">Content manager</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar3.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Scott Ruiz</p>
+								<p class="small text-muted">Developer</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar4.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Ann Phillips</p>
+								<p class="small text-muted">Support Staff</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar5.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Cheryl Welch</p>
+								<p class="small text-muted">Graphic Designer</p>
+							</div>
+							<div>
+								<img class="img-avatar" src="{{ img_path }}avatars/avatar6.jpg" alt="" />
+								<p class="h6 profile-title m-t m-b-xs">Paul Cooper</p>
+								<p class="small text-muted">Database Developer</p>
+							</div>
+						</div><!-- End Slider with row of slides/avatars -->
+					</div>
+				</div>				
+			</div><!-- End avatars row // .col-md-8 -->
+		</div><!-- .row -->
+		<!-- End Content Sliders -->
+
+		<!-- Image Sliders -->
+		<h2 class="section-title">Image Sliders</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<!-- Dots -->
+				<div class="card">
+					<div class="card-header">
+						<h4>Dots</h4>
+					</div>
+					<div class="card-block p-a-0">
+						<!-- Slider with dots -->
+						<div class="js-slider" data-slider-dots="true">
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo4.jpg" alt="" />
+							</div>
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo5.jpg" alt="" />
+							</div>
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo6.jpg" alt="" />
+							</div>
+						</div>
+						<!-- End Slider with dots -->
+					</div>
+				</div>
+				<!-- End Dots -->
+			</div>
+
+			<div class="col-md-6">
+				<!-- Slider Autoplay -->
+				<div class="card">
+					<div class="card-header">
+						<h4>Autoplay</h4>
+					</div>
+					<div class="card-block p-a-0">
+						<!-- Slider with autoplay -->
+						<div class="js-slider" data-slider-dots="true" data-slider-autoplay="true" data-slider-autoplay-speed="3000">
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo3.jpg" alt="" />
+							</div>
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo2.jpg" alt="" />
+							</div>
+							<div>
+								<img class="img-responsive" src="{{ img_path }}photos/photo1.jpg" alt="" />
+							</div>
+						</div>
+						<!-- End Slider with autoplay -->
+					</div>
+				</div>
+				<!-- End Slider Autoplay -->
+			</div>
+		</div>
+		<!-- .row -->
+	</div>
+	<!-- .container-fluid -->
+</div>
+<!-- End content section -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+<!-- Page JS Plugins CSS -->
+<link rel="stylesheet" href="{{ js_path }}plugins/slick/slick.min.css" />
+<link rel="stylesheet" href="{{ js_path }}plugins/slick/slick-theme.min.css" />
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page Plugins -->
+<script src="{{ js_path }}plugins/slick/slick.min.js"></script>
+
+<!-- Page JS Code -->
+<script>
+	$( function () {
+		// Init page helpers (Slick Slider plugin)
+		App.initHelpers( 'slick' );
+	});
+</script>
+{% endblock %}

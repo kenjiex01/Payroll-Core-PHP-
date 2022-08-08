@@ -1,0 +1,163 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Maps" %}
+{% set active_page = "base_js_maps" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Content section -->
+<div class="section">
+	<div class="container-fluid p-y-md">
+		<!-- Maps and Search functionality is initialized in js/pages/base_comp_maps.js, for more examples check https://hpneo.github.io/gmaps/ -->
+		<div class="row">
+			<!-- Search Location map -->
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header">
+						<!-- Search Form -->
+						<form class="js-form-search" action="base_comp_maps.html" method="post">
+							<div class="input-group input-group-lg">
+								<input class="js-search-address form-control" type="text" placeholder="Search location (e.g. Moscow)">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit"><i class="ion-ios-search-strong"></i></button>
+								</div>
+							</div>
+						</form><!-- End Search Form -->
+					</div>
+
+					<!-- Search Map Container -->
+					<div id="js-map-search" style="height: 300px;"></div>
+				</div>
+			</div><!-- End Search Location map // .col-md-8 -->
+
+			<!-- Geolocation Map -->
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-header">
+						<h4>Geolocation map</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Map container -->
+					<div id="js-map-geo" style="height: 326px;"></div>
+				</div>
+			</div><!-- End Geolocation map // .col-md-4 -->
+
+			<!-- Terrain Map -->
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h4>Terrain map</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Terrain Map Container -->
+					<div id="js-map-ter" style="height: 350px;"></div>
+				</div>			
+			</div><!-- End Terrain Map // .col-md-6 -->
+
+			<!-- Satellite Map // .col-md-6 -->
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h4>Satellite map</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Satellite Map Container -->
+					<div id="js-map-sat" style="height: 350px;"></div>
+				</div>
+			</div><!-- End Satellite Map // .col-md-6 -->
+
+			<!-- Map with markers -->
+			<div class="col-md-6">			
+				<div class="card">
+					<div class="card-header">
+						<h4>Map with markers</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Map container -->
+					<div id="js-map-markers" style="height: 350px;"></div>
+				</div>			
+			</div><!-- End Map with markers // .col-md-6 -->
+
+			<!-- Map with overlay -->
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h4>Map with overlay</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Map container -->
+					<div id="js-map-overlay" style="height: 350px;"></div>
+					<!-- Overlay content -->
+					<!--googleoff: index-->
+					<div id="js-map-overlay-content" class="hidden">
+						<div class="alert alert-success">
+							<h4>Overlay Message</h4>
+							<p>You can overlay messages on your maps!</p>
+						</div>
+					</div>
+					<!--googleon: index-->
+				</div>			
+			</div><!-- End Map with overlay // .col-md-6 -->
+
+			<!-- Street view map -->
+			<div class="col-md-12">			
+				<div class="card">
+					<div class="card-header">
+						<h4>Street map</h4>
+						<ul class="card-actions">
+							<li>
+								<button type="button"><i class="ion-more"></i></button>
+							</li>
+						</ul>
+					</div>
+					<!-- Map container -->
+					<div id="js-map-street" style="height: 350px;"></div>
+				</div>			
+			</div><!-- End Street view map // .col-md-12 -->
+		</div><!-- .row -->
+	</div><!-- .container-fluid -->
+</div><!-- .section -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page JS Plugins -->
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="{{ js_path }}plugins/gmapsjs/gmaps.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="{{ js_path }}pages/base_js_maps.js"></script>
+{% endblock %}

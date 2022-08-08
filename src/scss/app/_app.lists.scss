@@ -1,0 +1,155 @@
+//
+// Lists
+// -------------------------
+
+/* Base list */
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		position: relative;
+	}
+}
+
+/* Activity list */
+.list-activity > li {
+	margin-bottom: $spacer / 2;
+	padding-bottom: $spacer / 2;
+	padding-left: 30px;
+	font-size: 13px;
+	border-bottom: 1px solid $gray-lighter;
+
+	> i:first-child {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 14px;
+		text-align: center;
+	}
+}
+
+/* Events list */
+.list-events > li {
+	margin-bottom: 5px;
+	padding: $spacer 30px $spacer 10px;
+	font-size: 12px;
+	font-weight: $font-weight-strong;
+
+	&:before {
+		margin-right: 8px;
+		display: inline-block;
+		font-family: 'Ionicons';
+		content: "\f3f3";
+	}
+
+	&:hover {
+		cursor: move;
+	}
+}
+
+/* Simple list */
+.list-simple > li {
+	margin-bottom: $line-height-computed;
+}
+
+// List li clearfix
+.list-li-clearfix > li {
+	@include clearfix();
+}
+
+/* Users list */
+.list-users {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-users > li:last-child > a {
+	border-bottom: none;
+}
+
+.list-users a {
+	position: relative;
+	padding: ($line-height-computed / 2) 8px ($line-height-computed / 2) 71px;
+	color: inherit;
+	display: block;
+	min-height: 62px;
+	font-weight: $font-weight-strong;
+	border-bottom: 1px solid $gray-lighter;
+
+	&:hover,
+	&:focus {
+		background-color: #f9f9f9;
+	}
+}
+
+.list-users a > img {
+	position: absolute;
+	left: 12px;
+	top: 10px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+}
+
+.list-users a > i {
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.list-users a .text-muted {
+	font-weight: $font-weight-base;
+}
+
+/* Styled ordered list */
+.list-numbers {
+	list-style: none;
+	counter-reset: item;
+}
+
+.list-numbers:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	border: 1px solid $gray-light-o;
+	left: 25px;
+	height: 85%;
+}
+
+.list-numbers li {
+	counter-increment: item;
+}
+
+.list-numbers li:before {
+	content: counter(item);
+	position: absolute;
+	background-color: $body-bg;
+	font-weight: 400;
+	left: 10px;
+	margin-top: -6.5px;
+	display: inline-block;
+	width: 1.875rem;
+	height: 1.875rem;
+	line-height: 1.875rem;
+	text-align: center;
+	border: 1px solid $gray-light-o;
+	border-radius: 50%;
+}
+
+.list-numbers.white li:before {
+	background-color: #fff;
+}

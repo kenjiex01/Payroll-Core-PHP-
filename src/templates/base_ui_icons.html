@@ -1,0 +1,80 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Icons" %}
+{% set active_page = "base_ui_icons" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- FontAwesome icons -->
+	<h2 class="section-title">FontAwesome</h2>
+	<div class="card">
+		<div class="card-block">
+			<table class="table table-bordered table-striped table-vcenter">
+				<thead>
+					<tr>
+						<th class="text-center w-5">Icon</th>
+						<th class="p-l-lg">Class name</th>
+						<th>CSS content</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for icon in fontawesome %}
+					<tr>
+						<th class="text-center" scope="row"><i class="fa fa-{{ icon.id }} fa-2x"></i></th>
+						<td class="p-l-lg">fa fa-{{ icon.id }}</td>
+						<td><code>\{{ icon.unicode }}</code></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- End FontAwesome icons -->
+
+	<!-- Ionicons -->
+	<h2 class="section-title">Ionicons</h2>
+	<div class="card">
+		<div class="card-block">
+			<table class="table table-bordered table-striped table-vcenter">
+				<thead>
+					<tr>
+						<th class="text-center w-5">Icon</th>
+						<th class="p-l-lg">Class name</th>
+						<th>CSS content</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for icon in ionicons %}
+					<tr>
+						<th class="text-center" scope="row"><i class="ion-{{ icon.name }} fa-2x"></i></th>
+						<td class="p-l-lg">ion-{{ icon.name }}</td>
+						<td><code>{{ icon.code }}</code></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- End Ionicons -->
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

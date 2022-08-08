@@ -1,0 +1,471 @@
+//
+// Forms
+// -------------------------
+
+/* App forms */
+
+/* Floating labels forms */
+.form-floating {
+	position: relative;
+}
+
+/* Material design Labels */
+.form-floating > label {
+	position: absolute;
+	top: 6px;
+	left: $padding-base-horizontal;
+	font-size: 85%;
+	@include translate(0, -24px);
+}
+
+.form-floating > label {
+	color: $input-color-placeholder;
+	font-size: 81.25%;
+	font-weight: $font-weight-base;
+	line-height: 2;
+	cursor: text;
+	@include transition(all .15s ease-out);
+	@include translate(0, 0);
+}
+
+/* Floating Form controls and input addons */
+.form-floating > .form-control {
+	background-color: transparent;
+	padding-top: $padding-base-vertical * 2.5;
+	padding-bottom: $padding-base-vertical / 2.5;
+
+	&:focus {
+		background-color: transparent;
+
+		+ label {
+			color: $text-color;
+		}
+	}
+}
+
+.form-floating > .form-control:focus + label,
+.form-floating.open > label {
+	font-size: 75%;
+	cursor: default;
+	opacity: .5;
+	@include translate(0, -25%);
+}
+
+.form-floating .form-control[disabled],
+.form-floating .form-control[readonly],
+.form-floating fieldset[disabled] .form-control {
+	border: 1px dashed #ccc;
+	@include box-shadow(none);
+}
+
+/* Forms Material style */
+
+/* Material design forms */
+.form-material {
+	position: relative;
+	margin: 10px 0 10px;
+}
+
+/* Material design Labels */
+.form-material > label {
+	position: absolute;
+	top: 6px;
+	left: 0;
+	font-size: 85%;
+	@include translate(0, -24px);
+}
+
+.form-material.floating > label {
+	font-size: 15px;
+	cursor: text;
+	@include transition(all .15s ease-out);
+	@include translate(0, 0);
+}
+
+/* Material design Form controls and input addons */
+.form-material > .form-control {
+	padding-left: 0;
+	padding-right: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+	@include box-shadow(0 1px 0 $input-border);
+
+	&:focus {
+		background-color: transparent;
+		@include box-shadow(0 2px 0 $app-primary);
+
+		+ label {
+			color: $text-color;
+		}
+
+		~ .input-group-addon {
+			@include box-shadow(0 2px 0 $app-primary);
+		}
+	}
+}
+
+.form-material > .form-control:focus + label,
+.form-material.floating.open > label {
+	font-size: 85%;
+	font-weight: $font-weight-strong;
+	cursor: default;
+	@include translate(0, -24px);
+}
+
+.form-material .form-control[disabled],
+.form-material .form-control[readonly],
+.form-material fieldset[disabled] .form-control {
+	background-color: #fff;
+	border-bottom: 1px dashed #ccc;
+	@include box-shadow(none);
+}
+
+.form-material.input-group .input-group-addon {
+	border: none;
+	background-color: transparent;
+	border-radius: 0 !important;
+	@include box-shadow(0 1px 0 $input-border);
+	@include transition(all .15s ease-out);
+}
+
+/* Material design Form Focus Variations */
+.form-material-primary > .form-control {
+	@include form-control-material-focus-variant($brand-primary);
+}
+
+.form-material-success > .form-control {
+	@include form-control-material-focus-variant($brand-success);
+}
+
+.form-material-info > .form-control {
+	@include form-control-material-focus-variant($brand-info);
+}
+
+.form-material-warning > .form-control {
+	@include form-control-material-focus-variant($brand-warning);
+}
+
+.form-material-danger > .form-control {
+	@include form-control-material-focus-variant($brand-danger);
+}
+
+/* Material design Form State Variations */
+.has-success .form-material {
+	@include form-control-material-state-variant($brand-success);
+}
+
+.has-info .form-material {
+	@include form-control-material-state-variant($brand-info);
+}
+
+.has-warning .form-material {
+	@include form-control-material-state-variant($brand-warning);
+}
+
+.has-error .form-material {
+	@include form-control-material-state-variant($brand-danger);
+}
+
+// CSS Inputs (Checkboxes + Radios + Switches) - Base class
+/* Css Inputs */
+.css-input {
+	position: relative;
+	display: inline-block;
+	margin: 2px 0;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.css-input input {
+	position: absolute;
+	opacity: 0;
+
+	&:focus + span {
+		//box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+	}
+
+	+ span {
+		position: relative;
+		display: inline-block;
+		margin-top: -3px;
+		margin-right: 3px;
+		vertical-align: middle;
+
+		&:after {
+			position: absolute;
+			content: '';
+		}
+	}
+}
+
+/* CSS Checkboxes */
+.css-checkbox {
+	margin: 7px 0;
+}
+
+.css-checkbox input {
+	+ span {
+
+		&:after {
+		}
+	}
+}
+
+.css-checkbox input + span {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid $gray-lighter;
+	border-radius: $border-radius-base;
+}
+
+.css-checkbox input + span:after {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-family: 'Ionicons';
+	font-size: 13px;
+	color: #fff;
+	line-height: 18px;
+	content: '\f122';
+	text-align: center;
+}
+
+.css-checkbox input:checked + span:after {
+	color: $text-color;
+}
+
+.css-checkbox:hover input + span {
+	border-color: darken($gray-lighter, 6.25%);
+	box-shadow: inset 0 0 1px rgba(0, 0, 0, .14);
+}
+
+/* Css Checkbox Variations */
+// Small checkbox
+.css-checkbox-sm {
+	margin: 9px 0 8px;
+	font-size: 12px;
+}
+
+.css-checkbox-sm input + span {
+	width: 16px;
+	height: 16px;
+}
+
+.css-checkbox-sm input + span:after {
+	font-size: 8px;
+	line-height: 15px;
+}
+
+// Large checkbox
+.css-checkbox-lg {
+	margin: 3px 0;
+}
+
+.css-checkbox-lg input + span {
+	width: 30px;
+	height: 30px;
+}
+
+.css-checkbox-lg input + span:after {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+// Rounded checkbox
+.css-checkbox-rounded input + span {
+	border-radius: 50%;
+}
+
+.css-checkbox-default input:checked + span {
+	//background-color: $gray-lighter;
+	//border-color: $gray-lighter;
+}
+
+.css-checkbox-default input:checked + span:after {
+	//border-color: $gray-lighter;
+}
+
+.css-checkbox-primary input:checked + span {
+	background-color: $app-primary;
+	border-color: $app-primary;
+}
+
+.css-checkbox-info input:checked + span {
+	background-color: $brand-info;
+	border-color: $brand-info;
+}
+
+.css-checkbox-success input:checked + span {
+	background-color: $brand-success;
+	border-color: $brand-success;
+}
+
+.css-checkbox-warning input:checked + span {
+	background-color: $brand-warning;
+	border-color: $brand-warning;
+}
+
+.css-checkbox-danger input:checked + span {
+	background-color: $brand-danger;
+	border-color: $brand-danger;
+}
+
+/* CSS Radios */
+.css-radio {
+	margin: 7px 0;
+}
+
+.css-radio input {
+	+ span {
+		width: 20px;
+		height: 20px;
+		background-color: #fff;
+		border: 1px solid $gray-lighter;
+		border-radius: 50%;
+
+		&:after {
+			top: 2px;
+			right: 2px;
+			bottom: 2px;
+			left: 3px;
+			background-color: #fff;
+			border-radius: 50%;
+			opacity: 0;
+			@include transition(opacity .2s ease-out);
+		}
+	}
+
+	&:checked + span:after {
+		opacity: 1;
+	}
+}
+
+.css-radio:hover input + span {
+	border-color: #ccc;
+}
+
+/* CSS Radios Variations */
+.css-radio-sm {
+	margin: 9px 0 8px;
+	font-size: 12px;
+
+	input + span {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.css-radio-lg {
+	margin: 5px 0;
+
+	input + span {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+.css-radio-default input:checked + span:after { background-color: $app-light; }
+.css-radio-primary input:checked + span:after { background-color: $app-primary; }
+.css-radio-info input:checked + span:after { background-color: $brand-info; }
+.css-radio-success input:checked + span:after { background-color: $brand-success; }
+.css-radio-warning input:checked + span:after { background-color: $brand-warning; }
+.css-radio-danger input:checked + span:after { background-color: $brand-danger; }
+
+
+/* CSS Switches */
+.switch {
+	margin: 3px 0;
+}
+
+.switch input + span {
+	width: 54px;
+	height: 30px;
+	background-color: $gray-lighter-o;
+	border-radius: 30px;
+	@include transition(background-color .4s);
+
+	&:after {
+		top: 2px;
+		bottom: 2px;
+		left: 3px;
+		width: 26px;
+		background-color: #fff;
+		border-radius: 50%;
+		@include box-shadow(1px 0 3px rgba(0, 0, 0, .1));
+		@include transition-transform(.15s ease-out);
+	}
+}
+
+.switch input:checked + span {
+	background-color: #ddd;
+
+	&:after {
+		@include box-shadow(-2px 0 3px rgba(0, 0, 0, .1));
+		@include translate(23px, 0);
+	}
+}
+
+
+/* CSS Switches Variations */
+// Small switch
+.switch-sm {
+	margin: 8px 0 7px;
+	font-size: 12px;
+}
+
+.switch-sm input + span {
+	width: 36px;
+	height: 20px;
+}
+
+.switch-sm input + span:after {
+	width: 16px;
+}
+
+.switch-sm input:checked + span:after {
+	@include translate(15px, 0);
+}
+
+// Large switch
+.switch-lg {
+	margin: 1px 0;
+}
+
+.switch-lg input + span {
+	width: 70px;
+	height: 34px;
+}
+
+.switch-lg input + span:after {
+	width: 30px;
+}
+
+.switch-lg input:checked + span:after {
+	@include translate(35px, 0);
+}
+
+// Square switch
+.switch-square input + span,
+.switch-square input + span:after {
+	border-radius: 0;
+}
+
+//.switch-default input:checked + span { background-color: $app-light; }
+.switch-primary input:checked + span { background-color: $app-primary; }
+.switch-info input:checked + span { background-color: $brand-info; }
+.switch-success input:checked + span { background-color: $brand-success; }
+.switch-warning input:checked + span { background-color: $brand-warning; }
+.switch-danger input:checked + span { background-color: $brand-danger; }
+
+.switch-app input:checked + span { background-color: $app-primary; }
+.switch-green input:checked + span { background-color: $app-green; }
+.switch-blue input:checked + span { background-color: $app-blue; }
+.switch-orange input:checked + span { background-color: $app-orange; }
+.switch-red input:checked + span { background-color: $app-red; }
+.switch-purple input:checked + span { background-color: $app-purple; }
+.switch-cyan input:checked + span { background-color: $app-cyan; }
+.switch-teal input:checked + span { background-color: $app-teal; }
+.switch-light input:checked + span { background-color: $app-light; }

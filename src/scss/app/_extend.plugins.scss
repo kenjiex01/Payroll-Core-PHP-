@@ -1,0 +1,430 @@
+//
+// Overwrite/Extend styles of various JS plugins
+// --------------------------------------------------
+
+/* SlimScroll */
+.slimScrollBar {
+	right: 0 !important;
+	border-radius: $border-radius-base !important;
+}
+
+/* Bootstrap Notify */
+.alert[data-notify='container'] {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* DataTables.js */
+table.dataTable {
+	margin-bottom: $spacer !important;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+	&:after {
+		font-family: Ionicons;
+		opacity: 1;
+		right: $table-cell-padding;
+	}
+
+	&.text-center:after {
+		left: 50%;
+		right: auto;
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+table.dataTable thead .sorting:after {
+	content: '\f361\00a0\f363';
+	display: inline-block;
+	transform: rotate(90deg);
+}
+
+table.dataTable thead .sorting.text-center:after {
+	transform: translate3d(-50%, 0, 0) rotate(90deg);
+}
+
+table.dataTable thead .sorting_asc:after {
+	content: '\f365';
+}
+
+table.dataTable thead .sorting_desc:after {
+	content: '\f35f';
+}
+
+.table.dataTable thead>tr>th.text-center {
+	padding-right: $table-cell-padding;
+}
+
+.table.dataTable thead > tr > th {
+	padding-left: $table-cell-padding;
+}
+
+div.dataTables_info {
+	padding-top: 10px;
+}
+
+div.dataTables_paginate ul.pagination {
+	margin: 10px 0 5px;
+}
+
+/* Draggable Cards (jQueryUI) */
+.draggable {
+	&-handler {
+		cursor: move;
+	}
+
+	&-placeholder {
+		background-color: $gray-lighter-o;
+		border: 1px dashed #ccc;
+	}
+}
+
+/* Highlight.js */
+pre.pre-sh {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+.hljs {
+	background-color: #282d33;
+	color: #fff;
+	padding: $panel-body-padding;
+}
+
+.bash .hljs-variable, .cs .hljs-preprocessor, .cs .hljs-preprocessor .hljs-keyword, .css .hljs-attr_selector, .css .hljs-value, .ini .hljs-keyword, .ini .hljs-value, .javascript .hljs-tag .hljs-title, .makefile .hljs-constant, .nginx .hljs-variable, .scss .hljs-variable, .xml .hljs-tag {
+	color: #969896;
+}
+
+/* DropzoneJS */
+.dropzone {
+	min-height: 200px;
+	background-color: #f9f9f9;
+	border: 2px dashed #bbb;
+	border-radius: $border-radius-base;
+	transition: all 0.2s ease-out;
+
+	.dz-message {
+		margin: 65px 0;
+		font-size: 16px;
+		font-style: italic;
+		color: #888;
+	}
+
+	&:hover {
+		background-color: #f9f9f9;
+		border-color: $link-color;
+
+		.dz-message {
+			color: $link-color;
+		}
+	}
+}
+
+/* Bootstrap Datepicker */
+.js-datepicker {
+	width: 100%;
+	margin-bottom: $spacer-y;
+	overflow-y: hidden;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	border-radius: $border-radius-base;
+}
+
+.datepicker {
+	z-index: 1051 !important;
+}
+
+.input-daterange .input-group-addon {
+	min-width: 30px;
+	color: $text-color;
+	background-color: #f9f9f9;
+	border-color: $input-border;
+	line-height: inherit;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+	border-radius: $border-radius-base;
+}
+
+.datepicker table tr td {
+	&.today {
+		$today-bg: lighten($app-orange, 30%);
+		@include button-variant(#000, $today-bg, darken($today-bg, 20%));
+
+		&.focused {
+			background-color: darken($today-bg, 10%);
+		}
+
+		&.disabled,
+		&.disabled:active {
+			background-color: $today-bg;
+			color: $btn-link-disabled-color;
+		}
+	}
+
+	&.selected,
+	&.selected.highlighted {
+		@include button-variant(#fff, $gray-lighter, $gray-light);
+		text-shadow: none;
+	}
+
+	&.active,
+	&.active.highlighted {
+		@include button-variant(#fff, $app-primary, $app-primary);
+		text-shadow: none;
+
+		&:hover {
+			@include button-variant(#fff, $app-primary, $app-primary);
+		}
+	}
+}
+
+/* Bootstrap Colorpicker */
+.colorpicker.dropdown-menu {
+	min-width: 130px;
+}
+
+/* jQuery Tags Input */
+div.tagsinput {
+	padding: $padding-base-vertical $padding-base-horizontal;
+	border-color: $input-border;
+	border-radius: $border-radius-base;
+}
+
+div.tagsinput input {
+	font-family: inherit;
+	font-weight: 400;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 22px;
+	line-height: 22px;
+}
+
+.form-material div.tagsinput {
+	padding-right: 0;
+	padding-left: 0;
+	border: none;
+	border-bottom: 1px solid $input-border;
+}
+
+div.tagsinput span.tag {
+	padding: 2px 6px;
+	height: 22px;
+	line-height: 22px;
+	color: #fff;
+	font-family: inherit;
+	font-weight: $font-weight-strong;
+	background-color: lighten($app-secondary, 27.5%);
+	border-color: lighten($app-secondary, 25%);
+	border-radius: $border-radius-base;
+
+	a {
+		font-size: 13px;
+		color: rgba(255, 255, 255, .5);
+
+		&:hover {
+			color: rgba(255, 255, 255, .75);
+		}
+	}
+}
+
+/* Select2 */
+.select2-container {
+	.select2-selection--single {
+		height: 34px;
+	}
+
+	.select2-dropdown {
+		border-color: $input-border;
+		@include border-bottom-radius($border-radius-base);
+	}
+}
+
+.select2-container--default {
+	.select2-selection--single {
+		border-color: $input-border;
+		border-radius: $border-radius-base;
+
+		.select2-selection__rendered {
+			padding-left: 12px;
+			line-height: 34px;
+
+			.form-material & {
+				padding-left: 0;
+			}
+		}
+
+		.select2-selection__arrow {
+			height: 34px;
+		}
+
+		.form-material & {
+			border: none;
+			border-bottom: 1px solid $input-border;
+			border-radius: 0;
+		}
+
+		.select2-selection__placeholder {
+			color: #aaa;
+		}
+	}
+
+	.select2-selection--multiple,
+	&.select2-container--focus .select2-selection--multiple {
+		border-color: $input-border;
+		border-radius: $border-radius-base;
+
+		.form-material & {
+			border: none;
+			border-bottom: 1px solid $input-border;
+			border-radius: 0;
+		}
+
+		& .select2-selection__rendered {
+			padding-right: 12px;
+			padding-left: 12px;
+
+			.form-material & {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.select2-selection--multiple {
+		.select2-selection__choice {
+			height: 22px;
+			line-height: 22px;
+			color: #fff;
+			font-size: 13px;
+			font-weight: $font-weight-strong;
+			background-color: lighten($app-secondary, 27.5%);
+			border-color: lighten($app-secondary, 25%);
+			border-radius: $border-radius-base;
+		}
+
+		.select2-selection__choice__remove {
+			margin-right: 5px;
+			color: rgba(255,255,255,.5);
+
+			&:hover {
+				color: rgba(255,255,255,.75);
+			}
+		}
+	}
+
+	.select2-search--dropdown .select2-search__field {
+		border-color: $input-border;
+	}
+
+	.select2-results__option--highlighted[aria-selected] {
+		background-color: $app-primary;
+	}
+
+	.select2-search--inline .select2-search__field {
+		padding-right: 0;
+		padding-left: 0;
+		font-family: $font-family-base;
+		@include box-shadow(none);
+
+		.form-material & {
+			padding-left: 0;
+		}
+	}
+}
+
+.select2-search--dropdown .select2-search__field {
+	padding: 6px 12px;
+	font-family: $font-family-base;
+	border-radius: $border-radius-base;
+	@include box-shadow(none);
+}
+
+/* Slick slider plugin */
+.slick-next,
+.slick-prev {
+	display: none;
+	visibility: hidden;
+}
+
+.slick-dots {
+	margin: 0;
+	padding: 16px 0;
+	position: static;
+
+	.card-block & {
+		margin-bottom: -$panel-body-padding;
+	}
+}
+
+.slick-dots li {
+	vertical-align: middle;
+}
+
+.slick-dots li button:before {
+	color: $gray-dark-o;
+	font-size: 8px;
+	transition: opacity .15s ease-out;
+}
+
+.slick-dots li.slick-active button:before {
+	color: $app-primary;
+}
+
+/* jQuery Sparkline */
+.jqstooltip {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none !important;
+    background-color: rgba(0,0,0,.75) !important;
+}
+
+/* Easy Pie Chart
+.pie-chart {
+	position: relative;
+	display: inline-block;
+
+	> span {
+		margin-top: -4px;
+		right: 0;
+		left: 0;
+		text-align: center;
+	}
+}
+
+/* Flot Charts */
+.flot-tooltip {
+	position: absolute;
+	display: none;
+	color: #fff;
+	background: rgba(0, 0, 0, .75);
+	padding: 4px 8px;
+}
+
+.flot-pie-label {
+	color: #fff;
+	font-size: 13px;
+	padding: 4px 8px;
+	text-align: center;
+}
+
+.legend > table td {
+	padding: 3px 4px;
+	font-size: 14px;
+}
+
+.legend > table .legendColorBox > div {
+	border: 0 !important;
+	padding: 0;
+}
+
+.legend > table .legendColorBox > div > div {
+	border-radius: 50%;
+}
+
+/* HTML5 Placeholder */
+.placeholder {
+	color: #aaa;
+}

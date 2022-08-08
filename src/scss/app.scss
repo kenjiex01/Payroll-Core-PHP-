@@ -1,0 +1,22 @@
+/*
+App.css
+Template name: AppUI
+Author: rustheme
+*/
+
+// Core variables and mixins
+@import "variables";
+@import "bootstrap/mixins";
+// Place App mixins after Bootstrap ones so we can overwrite them
+@import "mixins";
+
+// App Modules
+@import "app/app.layout";
+@import "app/app.forms";
+@import "app/app.lists";
+@import "app/app.cards";
+@import "app/app.images";
+@import "app/app.utilities";
+
+// Plugins
+@import "app/extend.plugins";

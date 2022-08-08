@@ -1,0 +1,188 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Syntax highlight" %}
+{% set active_page = "base_js_syntax_highlight" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Content section -->
+<!-- Syntax Highlighting functionality is initialized in App() -> uiHelperHighlightjs() -->
+
+<div class="container-fluid p-y-md">
+	<!-- HTML -->
+	<h2 class="section-title">HTML</h2>
+	<pre class="pre-sh"><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+        &lt;title&gt;Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Your content --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+	<!-- CSS -->
+	<h2 class="section-title">CSS</h2>
+	<pre class="pre-sh"><code class="css">/*
+=================================================================
+SECTION
+=================================================================
+*/
+
+/* Sub section 1 */
+selector {
+}
+
+/* Sub section 2 */
+selector {
+}
+
+/*
+=================================================================
+SECTION
+=================================================================
+*/
+
+/* Sub section 1 */
+selector {
+}
+
+/* Sub section 2 */
+selector {
+}</code></pre><!-- End CSS -->
+
+	<!-- Less -->
+	<h2 class="section-title">Less</h2>
+	<pre class="pre-sh"><code class="less">@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+    -webkit-box-shadow: @style @c;
+    box-shadow:         @style @c;
+}
+
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+    .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+.box {
+    color: saturate(@base, 5%);
+    border-color: lighten(@base, 30%);
+    div { .box-shadow(0 0 5px, 30%) }
+}</code></pre><!-- End Less -->
+
+	<!-- JavaScript -->
+	<h2 class="section-title">JavaScript</h2>
+<pre class="pre-sh"><code class="javascript">/*
+Document: App.js
+Author: Rustheme
+*/
+
+var App = function() {
+
+    // User Interface init
+    var uiInit = function() {
+
+    };
+
+    return {
+        init: function() {
+            uiInit();
+        }
+    };
+}();
+
+// Initialize app when page loads
+jQuery(function(){ App.init(); });</code></pre>
+<!-- End JavaScript -->
+
+	<!-- PHP -->
+	<h2 class="section-title">PHP</h2>
+<pre class="pre-sh"><code class="php">&lt;?php
+class App {
+    function home() {
+        // ...
+    }
+
+    function profile() {
+        // ...
+    }
+
+    function settings() {
+        // ...
+    }
+}</code></pre>
+<!-- End PHP -->
+
+	<!-- Ruby -->
+	<h2 class="section-title">Ruby</h2>
+<pre class="pre-sh"><code class="ruby"># Output "I love Ruby"
+say = "I love Ruby"
+puts say
+
+# Output "I *LOVE* RUBY"
+say['love'] = "*love*"
+puts say.upcase
+
+# Output "I *love* Ruby"
+# five times
+5.times { puts say }</code></pre>
+<!-- End Ruby -->
+
+	<!-- Python -->
+	<h2 class="section-title">Python</h2>
+<pre class="pre-sh"><code class="python">name = raw_input( 'What is your name?\n' )
+
+print 'Hi, %s.' % name</code></pre>
+<!-- End Python -->
+
+	<!-- Json -->
+	<h2 class="section-title">Json</h2>
+<pre class="pre-sh"><code class="json">{
+    "menu": {
+        "id": "file",
+        "value": "File",
+        "popup": {
+            "menuitem": [
+                {"value": "New", "onclick": "CreateNewDoc()"},
+                {"value": "Open", "onclick": "OpenDoc()"},
+                {"value": "Close", "onclick": "CloseDoc()"}
+            ]
+        }
+    }
+}</code></pre>
+<!-- End Json -->
+
+</div><!-- .container-fluid -->
+<!-- End content section -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+<!-- Page JS Plugins CSS -->
+<link rel="stylesheet" href="{{ js_path }}plugins/highlightjs/github-gist.min.css" />
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page JS Plugins -->
+<script src="{{ js_path }}plugins/highlightjs/highlight.pack.js"></script>
+
+<!-- Page JS Code -->
+<script>
+	$( function () {
+		// Init page helpers (Highlight.js plugin)
+		App.initHelpers( 'highlightjs' );
+	});
+</script>
+{% endblock %}

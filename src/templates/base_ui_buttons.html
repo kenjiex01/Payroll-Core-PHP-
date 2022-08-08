@@ -1,0 +1,236 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Buttons" %}
+{% set active_page = "base_ui_buttons" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+ 
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Page Content -->
+{% block content %}
+
+<div class="container-fluid p-y-md">
+	<!-- Default Buttons -->
+	<div class="card">
+		<div class="card-header">
+			<h4>AppUI buttons</h4>
+		</div>
+		<!-- AppUI buttons -->
+		<div class="card-block">
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped table-vcenter">
+				<thead>
+					<tr>
+						<th class="w-15">Button</th>
+						<th>class=""</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><button class="btn btn-app btn-block" type="button">Default</button></td>
+						<td><code>btn btn-app</code></td>
+						<td>Default AppUI button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-blue btn-block" type="button">Blue</button></td>
+						<td><code>btn btn-app-blue</code></td>
+						<td>Blue App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-orange btn-block" type="button">Orange</button></td>
+						<td><code>btn btn-app-orange</code></td>
+						<td>Orange App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-red btn-block" type="button">Red</button></td>
+						<td><code>btn btn-app-red</code></td>
+						<td>Red App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-purple btn-block" type="button">Purple</button></td>
+						<td><code>btn btn-app-purple</code></td>
+						<td>Purple App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-cyan btn-block" type="button">Cyan</button></td>
+						<td><code>btn btn-app-cyan</code></td>
+						<td>Cyan App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-green btn-block" type="button">Green</button></td>
+						<td><code>btn btn-app-green</code></td>
+						<td>Green App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-teal btn-block" type="button">Teal</button></td>
+						<td><code>btn btn-app-teal</code></td>
+						<td>Teal App button</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-app-light btn-block" type="button">Light</button></td>
+						<td><code>btn btn-app-light</code></td>
+						<td>Light App button</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- End AppUI buttons -->
+		</div><!-- .card-block -->
+	</div><!-- .card -->
+
+	<div class="card">
+		<div class="card-header">
+			<h4>Bootstrap buttons</h4>
+		</div>
+		<div class="card-block">
+		<!-- Bootstrap Buttons -->
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped table-vcenter">
+				<thead>
+					<tr>
+						<th class="w-15">Button</th>
+						<th>class=""</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><button class="btn btn-default btn-block" type="button">Default</button></td>
+						<td><code>btn btn-default</code></td>
+						<td>Standard gray button with gradient</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-primary btn-block" type="button">Primary</button></td>
+						<td><code>btn btn-primary</code></td>
+						<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-info btn-block" type="button">Info</button></td>
+						<td><code>btn btn-info</code></td>
+						<td>Used as an alternative to the default styles</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-success btn-block" type="button">Success</button></td>
+						<td><code>btn btn-success</code></td>
+						<td>Indicates a successful or positive action</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-warning btn-block" type="button">Warning</button></td>
+						<td><code>btn btn-warning</code></td>
+						<td>Indicates caution should be taken with this action</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-danger btn-block" type="button">Danger</button></td>
+						<td><code>btn btn-danger</code></td>
+						<td>Indicates a dangerous or potentially negative action</td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-link btn-block" type="button">Link</button></td>
+						<td><code>btn btn-link</code></td>
+						<td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- End Bootstrap Buttons -->
+		</div><!-- .card-block -->
+	</div><!-- .card -->
+	<!-- End Default Buttons -->
+
+	<!-- Button variants -->
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Outline variants</h4>
+				</div>
+				<div class="card-block">
+					<p>
+						<button class="btn btn-lg btn-app" type="button">Large button</button>
+						<button class="btn btn-lg btn-app-outline" type="button">Large button</button>
+					</p>
+					<p>
+						<button class="btn btn-app-blue" type="button">Default button</button>
+						<button class="btn btn-app-blue-outline" type="button">Default button</button>
+					</p>
+					<p>
+						<button class="btn btn-sm btn-app-cyan" type="button">Small button</button>
+						<button class="btn btn-sm btn-app-cyan-outline" type="button">Small button</button>
+					</p>
+					<p>
+						<button class="btn btn-xs btn-app-teal" type="button">Mini button</button>
+						<button class="btn btn-xs btn-app-teal-outline" type="button">Mini button</button>
+					</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Rounded variants</h4>
+				</div>
+				<div class="card-block">
+					<p>
+						<button class="btn btn-lg btn-pill btn-app" type="button">Large button</button>
+						<button class="btn btn-lg btn-pill btn-app-outline" type="button">Large button</button>
+					</p>
+					<p>
+						<button class="btn btn-pill btn-app-blue" type="button">Default button</button>
+						<button class="btn btn-pill btn-app-blue-outline" type="button">Default button</button>
+					</p>
+					<p>
+						<button class="btn btn-sm btn-pill btn-app-cyan" type="button">Small button</button>
+						<button class="btn btn-sm btn-pill btn-app-cyan-outline" type="button">Small button</button>
+					</p>
+					<p>
+						<button class="btn btn-xs btn-pill btn-app-teal" type="button">Mini button</button>
+						<button class="btn btn-xs btn-pill btn-app-teal-outline" type="button">Mini button</button>
+					</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h4>Disabled variants</h4>
+				</div>
+				<div class="card-block">
+					<p>
+						<button class="btn btn-lg btn-app disabled" type="button">Large button</button>
+						<button class="btn btn-lg btn-app-outline disabled" type="button">Large button</button>
+					</p>
+					<p>
+						<button class="btn btn-app-blue disabled" type="button">Default button</button>
+						<button class="btn btn-app-blue-outline disabled" type="button">Default button</button>
+					</p>
+					<p>
+						<button class="btn btn-sm btn-app-cyan disabled" type="button">Small button</button>
+						<button class="btn btn-sm btn-app-cyan-outline disabled" type="button">Small button</button>
+					</p>
+					<p>
+						<button class="btn btn-xs btn-app-teal disabled" type="button">Mini button</button>
+						<button class="btn btn-xs btn-app-teal-outline disabled" type="button">Mini button</button>
+					</p>
+				</div><!-- .card-block -->
+			</div><!-- .card -->
+		</div><!-- .col-md-4 -->
+	</div><!-- .row -->
+	<!-- End Button variants -->
+</div><!-- .container-fluid -->
+
+{% endblock %}
+<!-- End Page Content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

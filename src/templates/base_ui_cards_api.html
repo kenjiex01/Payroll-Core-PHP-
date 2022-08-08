@@ -1,0 +1,257 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "UI Elements &ndash; Cards API" %}
+{% set active_page = "base_ui_cards_api" %}
+{% set open_subnav = "base_ui" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Cards API, functionality initialized in App() -> uiCardsApi() -->
+	<h2 class="section-title">API</h2>
+
+	<div class="row">
+
+		<div class="col-sm-12">
+			<div class="card" id="sample-card">
+				<div class="card-header">
+					<h4>Sample card</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button" data-toggle="card-action" data-action="fullscreen_toggle"></button>
+						</li>
+						<li>
+							<button type="button" data-toggle="card-action" data-action="content_toggle"></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>This is our test card with id <code>sample-card</code></p>
+				</div>
+			</div>
+		</div><!-- .col-sm-12 -->
+
+		<div class="col-sm-12">
+			<div class="card">
+				<div class="card-block">
+					<p>You can use <code>App.cards( '_#cardID_', '_mode_' );</code></p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>Live</th>
+									<th>Mode</th>
+									<th>Live</th>
+									<th>Mode</th>
+									<th>Live</th>
+									<th>Mode</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'content_toggle' );">Toggle Content</button>
+									</td>
+									<td>
+										<code>content_toggle</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'fullscreen_toggle' );">Toggle Fullscreen</button>
+									</td>
+									<td>
+										<code>fullscreen_toggle</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'refresh_toggle' );">Toggle Refresh</button>
+									</td>
+									<td>
+										<code>refresh_toggle</code>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'content_hide' );">Hide Content</button>
+									</td>
+									<td>
+										<code>content_hide</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'fullscreen_off' );">Fullscreen Off</button>
+									</td>
+									<td>
+										<code>fullscreen_off</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'state_loading' );">State Loading</button>
+									</td>
+									<td>
+										<code>state_loading</code>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'content_show' );">Show Content</button>
+									</td>
+									<td>
+										<code>content_show</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'fullscreen_on' );">Fullscreen On</button>
+									</td>
+									<td>
+										<code>fullscreen_on</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'state_normal' );">State Normal</button>
+									</td>
+									<td>
+										<code>state_normal</code>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'open' );">Open</button>
+									</td>
+									<td>
+										<code>open</code>
+									</td>
+									<td>
+										<button class="btn btn-app btn-pill btn-sm" type="button" onclick="App.cards( '#sample-card', 'close' );">Close</button>
+									</td>
+									<td>
+										<code>close</code>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- .table-responsive -->
+				</div>
+			</div>
+		</div><!-- .col-sm-12 -->
+	</div><!-- .row -->
+	<!-- End cards API -->
+
+	<!-- Interactive Cards, functionality initialized in App() -> uiCards() -->
+	<!-- In fullscreen and content toggle buttons, icon classes are auto added from App() -> uiCards() -->
+	<h2 class="section-title">Interactive cards</h2>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Toggle content</h4>
+					<ul class="card-actions">
+						<li>
+							<!-- To toggle Card's content, just add the following properties to your button: data-toggle="card-action" data-action="content_toggle" -->
+							<button type="button" data-toggle="card-action" data-action="content_toggle"></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p> Social impact international development; youth emergent experience in the field vaccine global human experience thinkers who make change happen Rosa Parks fairness. Diversification Ford Foundation recognize potential immunize connect Peace Corps advocate clean water; foundation The Elders smart cities assistance rural development.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Close</h4>
+					<ul class="card-actions">
+						<li>
+							<!-- To close a block, just add the following properties to your button: data-toggle="card-action" data-action="close" -->
+							<button type="button" data-toggle="card-action" data-action="close"><i class="ion-close"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>NGO employment equal opportunity, United Nations expanding community ownership public-private partnerships poverty democracy. Transform the world; social analysis, human-centered design justice freedom Andrew Carnegie long-term solution inclusive capitalism empower. Recognition combat HIV/AIDS social entrepreneurship.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Fullscreen</h4>
+					<ul class="card-actions">
+						<li>
+							<!-- To toggle card fullscreen, add the following properties to your button: data-toggle="card-action" data-action="fullscreen_toggle" -->
+							<button type="button" data-toggle="card-action" data-action="fullscreen_toggle"></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Work change-makers research detection healthcare. Cross-cultural sustainable future, Global South safety, combat malaria humanitarian donate investment development treatment. Empowerment dialogue, political global health indicator nutrition humanitarian relief developing refugee pathway to a better life civic engagement strengthen.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header">
+					<h4>Refresh</h4>
+					<ul class="card-actions">
+						<li>
+							<!--
+							To apply loading state to a card, add the following properties to your button: data-toggle="card-action" data-action="refresh_toggle"
+							If you also add the property data-action-mode="demo" the loading state will be disabled in 2 seconds for demonstration purposes
+
+							Without the demo mode, you can restore the card to its normal state by using the following JS code: App.cards( '#yourCardId' ,'state_normal' );
+							You can use it after you've loaded successfully your data (please check Cards API)
+							-->
+							<button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-android-refresh"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Momentum combat poverty Bono end hunger; impact care Angelina Jolie time of extraordinary change advancement vulnerable citizens. Our ambitions, design thinking; think tank, underprivileged, facilitate respect global citizens scalable sustainability aid citizenry. Global network truth assessment expert, working families, environmental.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="card">
+				<div class="card-header">
+					<h4>All Together</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button" data-toggle="card-action" data-action="fullscreen_toggle"></button>
+						</li>
+						<li>
+							<button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-android-refresh"></i></button>
+						</li>
+						<li>
+							<button type="button" data-toggle="card-action" data-action="content_toggle"></button>
+						</li>
+						<li>
+							<button type="button" data-toggle="card-action" data-action="close"><i class="ion-close"></i></button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-block">
+					<p>Efficient country marginalized communities fighting poverty. Altruism mobilize change movements technology activist. Disruption non-partisan Rockefeller giving, nonviolent resistance measures Medecins du Monde legal aid. Reduce carbon emissions dignity governance, reproductive rights focus on impact resourceful educate compassion.</p>
+					<p>Interconnectivity, sanitation enabler readiness positive social change cooperation policymakers, social foster climate change plumpy'nut solve. Implementation, action partnership liberal; peace asylum; committed; vulnerable population approach legitimize; human being our grantees and partners livelihoods.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Interactive cards -->
+</div>
+<!-- End Page Content -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

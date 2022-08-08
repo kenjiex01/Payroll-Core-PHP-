@@ -1,0 +1,187 @@
+<!-- Set document title - see "_layout/_frontend-document.html" -->
+{% set document_title = "Frontend - Pricing" %}
+{% set active_page = "frontend_pricing" %}
+
+<!-- Extend "header" block (see "_layout/_frontend-document.html") -->
+{% extends "_layout/_frontend-header.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_frontend-document.html") -->
+{% extends "_layout/_frontend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page header -->
+<div class="page-header bg-app bg-inverse">
+	<section class="container">
+		<!-- Section Content -->
+		<div class="p-y-lg text-center">
+			<h1 class="display-2">Flexible plans just for you</h1>
+			<p class="text-muted">Choose the one that fits you best and start building your web application today.</p>
+		</div>
+		<!-- End Section Content -->
+	</section>
+</div>
+<!-- End Page header -->
+
+<!-- Pricing -->
+<div class="page-content bg-white">
+	<section class="container">
+		<!-- Section Content -->
+		<div class="row m-y">
+			<div class="col-sm-6 col-lg-3">
+				<!-- Developer Plan -->
+				<a class="card hover-shadow-3 text-center" href="javascript:void(0)">
+					<div class="card-header">
+						<h3>Developer</h3>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<div class="h1 m-y-sm">$9</div>
+						<div class="h5 font-300 text-muted m-t-0">per month</div>
+					</div>
+					<div class="card-block">
+						<table class="table table-borderless table-condensed">
+							<tbody>
+								<tr>
+									<td><strong>2</strong> Projects</td>
+								</tr>
+								<tr>
+									<td><strong>10GB</strong> Storage</td>
+								</tr>
+								<tr>
+									<td><strong>15</strong> Users</td>
+								</tr>
+								<tr>
+									<td><strong>Email</strong> Support</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<span class="btn btn-default">Sign Up</span>
+					</div>
+				</a>
+				<!-- End Developer Plan -->
+			</div><!-- .col-sm-6 -->
+
+			<div class="col-sm-6 col-lg-3">
+				<!-- Startup Plan -->
+				<a class="card hover-shadow-3 text-center" href="frontend_login_signup.html">
+					<div class="card-header">
+						<h3>Startup</h3>
+					</div>
+					<div class="card-block bg-green bg-inverse">
+						<div class="h1 m-y-sm">$29</div>
+						<div class="h5 font-300 text-muted m-t-0">per month</div>
+					</div>
+					<div class="card-block">
+						<table class="table table-borderless table-condensed">
+							<tbody>
+								<tr>
+									<td><strong>10</strong> Projects</td>
+								</tr>
+								<tr>
+									<td><strong>30GB</strong> Storage</td>
+								</tr>
+								<tr>
+									<td><strong>100</strong> Users</td>
+								</tr>
+								<tr>
+									<td><strong>Full</strong> Support</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<span class="btn btn-app">Sign Up</span>
+					</div>
+				</a>
+				<!-- End Startup Plan -->
+			</div><!-- .col-sm-6 -->
+
+			<div class="col-sm-6 col-lg-3">
+				<!-- Business Plan -->
+				<a class="card hover-shadow-3 text-center" href="javascript:void(0)">
+					<div class="card-header">
+						<h3>Business</h3>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<div class="h1 m-y-sm">$49</div>
+						<div class="h5 font-300 text-muted m-t-0">per month</div>
+					</div>
+					<div class="card-block">
+						<table class="table table-borderless table-condensed">
+							<tbody>
+								<tr>
+									<td><strong>50</strong> Projects</td>
+								</tr>
+								<tr>
+									<td><strong>100GB</strong> Storage</td>
+								</tr>
+								<tr>
+									<td><strong>1000</strong> Users</td>
+								</tr>
+								<tr>
+									<td><strong>Full</strong> Support</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<span class="btn btn-default">Sign Up</span>
+					</div>
+				</a>
+				<!-- End Business Plan -->
+			</div><!-- .col-sm-6 -->
+
+			<div class="col-sm-6 col-lg-3">
+				<!-- Premium Plan -->
+				<a class="card hover-shadow-3 text-center" href="javascript:void(0)">
+					<div class="card-header">
+						<h3>Premium</h3>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<div class="h1 m-y-sm">$99</div>
+						<div class="h5 font-300 text-muted m-t-0">per month</div>
+					</div>
+					<div class="card-block">
+						<table class="table table-borderless table-condensed">
+							<tbody>
+								<tr>
+									<td><strong>Unlimited</strong> Projects</td>
+								</tr>
+								<tr>
+									<td><strong>Unlimited</strong> Storage</td>
+								</tr>
+								<tr>
+									<td><strong>Unlimited</strong> Users</td>
+								</tr>
+								<tr>
+									<td><strong>Full</strong> Support</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card-block bg-gray-lighter-o">
+						<span class="btn btn-default">Sign Up</span>
+					</div>
+				</a>
+				<!-- End Premium Plan -->
+			</div><!-- .col-sm-6 -->
+		</div><!-- .row -->
+
+		<!-- End Section Content -->
+	</section>
+</div>
+<!-- End Pricing -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+{% endblock %}

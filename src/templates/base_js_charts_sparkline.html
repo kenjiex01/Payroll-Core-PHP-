@@ -1,0 +1,167 @@
+<!-- Set document title - see "_layout/_backend-document.html" -->
+{% set document_title = "Components &ndash; Sparkline.js" %}
+{% set active_page = "base_js_charts_sparkline" %}
+{% set open_subnav = "base_js" %}
+
+<!-- Extend "drawer" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-drawer.html" %}
+
+<!-- Extend page's "content" block (see "_layout/_backend-document.html") -->
+{% extends "_layout/_backend-page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Page content -->
+<div class="container-fluid p-y-md">
+	<!-- Jquery Sparkline (initialized in js/pages/base_comp_charts.js), for more examples please check http://omnipotent.net/jquery.sparkline/#s-about -->
+	<h2 class="section-title">Sparkline</h2>
+	<!-- Bars -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Bars</h4>
+			<ul class="card-actions">
+				<li> <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button> </li>
+			</ul>
+		</div>
+		<div class="card-block text-center">
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Bar 1 Container -->
+					<p class="js-slc-bar1">4,3,2,4,5,7,8,4</p>
+					<p>Income</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Bar 2 Container -->
+					<p class="js-slc-bar2">980,1210,1350,900,500,700,1500,1485</p>
+					<p>Outcome</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Bar 3 Container -->
+					<p class="js-slc-bar3">8,11,9,8,7,5,10,12</p>
+					<p>Wages</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Bar 4 Container -->
+					<p class="js-slc-bar4">4,3,2,4,5,7,8,4</p>
+					<p>Wages</p>
+				</div>
+			</div>
+		</div><!-- .card-block -->
+	</div><!-- End Bars // .card -->
+
+	<!-- Lines -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Lines</h4>
+			<ul class="card-actions">
+				<li> <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button> </li>
+			</ul>
+		</div>
+		<div class="card-block">
+			<div class="row text-center">
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Line 1 Container -->
+					<p class="js-slc-line1">4,3,2,4,5,7,8,4</p>
+					<p>Income</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Line 2 Container -->
+					<p class="js-slc-line2">980,1210,1350,900,500,700,1500,1485</p>
+					<p>Outcome</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Line 3 Container -->
+					<p class="js-slc-line3">8,11,9,8,7,5,10,12</p>
+					<p>Wages</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Line 4 Container -->
+					<p class="js-slc-line4">8,11,9,8,7,5,10,12</p>
+					<p>Wages</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Lines // .card -->
+
+	<!-- Pie -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Pie</h4>
+			<ul class="card-actions">
+				<li> <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button> </li>
+			</ul>
+		</div>
+		<div class="card-block">
+			<div class="row text-center">
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Pie 1 Container -->
+					<p class="js-slc-pie1">8,3,2,2</p>
+					<p>Income</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Pie 2 Container -->
+					<p class="js-slc-pie2">1480,1210,1350,800</p>
+					<p>Outcome</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Pie 3 Container -->
+					<p class="js-slc-pie3">12,11,9,6</p>
+					<p>Wages</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Pie 4 Container -->
+					<p class="js-slc-pie4">8,11,9,7</p>
+					<p>Wages</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Pie // .card -->
+
+	<!-- Tristate -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Tristate</h4>
+			<ul class="card-actions">
+				<li> <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button> </li>
+			</ul>
+		</div>
+		<div class="card-block">
+			<div class="row text-center">
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Tristate 1 Container -->
+					<p class="js-slc-tristate1">-1,1,0,1,1,-1,0,1</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Tristate 2 Container -->
+					<p class="js-slc-tristate2">1,1,0,1,-1,-1,1,-1</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Tristate 3 Container -->
+					<p class="js-slc-tristate3">1,-1,0,-1,-1,0,0,1</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<!-- Sparkline Tristate 4 Container -->
+					<p class="js-slc-tristate4">1,-1,0,-1,-1,0,0,1</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Tristate // .card -->
+	<!-- End Sparkline Charts // .row -->
+</div><!-- .container-fluid -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom css to the <head> tag -->
+{% block scripts_head %}
+{% endblock %}
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<!-- Page JS Plugins -->
+<script src="{{ js_path }}plugins/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="{{ js_path }}pages/base_js_charts_sparkline.js"></script>
+{% endblock %}
